@@ -1,0 +1,61 @@
+# Entradas
+
+- set
+- clr
+- bi
+- Sp
+- Sc
+
+# Saidas
+
+- EnM
+- EnF
+- clr
+- ss
+
+# Estados
+
+A = Porta aberta sem senha
+B = Porta aberta com senha
+C = Porta fechada
+
+# Saidas dos estados
+
+A => 0010
+B => 1101
+C => 1100
+
+# Transições
+
+A => A : OTHER
+A => B : 10110
+B => A : X11XX
+B => C : X010X
+B => B : OTHER
+C => A : XX101
+C => C : OTHER
+
+
+# Funcionamento:
+-----------------
+Porta aberta sem senha
+-----------------------
+1. Seleciona a porta;
+2. Passa o cartão;
+3. Pressiona OK;
+
+R => Porta aberta e EnableFechar = 1.
+----------------------
+Porta aberta com senha
+----------------------
+1. Fecha a porta;
+
+R => Porta fechada e EnableFechar = 1.
+-------------
+Porta fechada
+-------------
+1. Seleciona a porta;
+2. Passa o cartão;
+3. Pressiona OK;
+
+R => Porta aberta e EnableFechar = 0.

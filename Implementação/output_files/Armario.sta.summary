@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Recovery 'enM'
+Slack : 0.005
+TNS   : 0.000
+
+Type  : Slow Model Removal 'enM'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'enM'
+Slack : -1.222
+TNS   : -6.222
+
+Type  : Fast Model Recovery 'enM'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Fast Model Removal 'enM'
+Slack : -0.081
+TNS   : -0.324
+
+Type  : Fast Model Minimum Pulse Width 'enM'
+Slack : -1.222
+TNS   : -6.222
+
+------------------------------------------------------------

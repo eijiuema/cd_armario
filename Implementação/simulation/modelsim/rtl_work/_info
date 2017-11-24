@@ -1,0 +1,164 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\uema\Desktop\Armario\simulation\modelsim
+Edecbuttons
+Z1 w1511367830
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\uema\Desktop\Armario\simulation\modelsim
+Z5 8C:/Users/uema/Desktop/Armario/DecButtons.vhd
+Z6 FC:/Users/uema/Desktop/Armario/DecButtons.vhd
+l0
+L4
+V3i3XPCN;i]IHI6hjKm<mb1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1511386026.786000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/uema/Desktop/Armario/DecButtons.vhd|
+Z10 !s107 C:/Users/uema/Desktop/Armario/DecButtons.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Cof7ZfUG<j8C=_0f;12fF3
+!i10b 1
+Adecbuttons
+R2
+R3
+DEx4 work 10 decbuttons 0 22 3i3XPCN;i]IHI6hjKm<mb1
+l10
+L9
+VVgTNc_E=n4;cB=N2f`eRV0
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 0aVfbG`i4@DJUM6@f3fW?1
+!i10b 1
+Edecdisplay
+w1511290537
+R2
+R3
+R4
+8C:/Users/uema/Desktop/Armario/DecDisplay.vhd
+FC:/Users/uema/Desktop/Armario/DecDisplay.vhd
+l0
+L4
+VG=2jWTcBLM[5S6nXij]783
+!s100 <zU<HdH=dDKG2nX9ndbgV3
+R7
+31
+!i10b 1
+!s108 1511386027.086000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/uema/Desktop/Armario/DecDisplay.vhd|
+!s107 C:/Users/uema/Desktop/Armario/DecDisplay.vhd|
+R11
+R12
+Eentrada
+Z13 w1511385583
+R2
+R3
+R4
+Z14 8C:/Users/uema/Desktop/Armario/Entrada.vhd
+Z15 FC:/Users/uema/Desktop/Armario/Entrada.vhd
+l0
+L4
+V8kYV>O88?2WgEl34PSDFU2
+R7
+31
+Z16 !s108 1511386026.994000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/uema/Desktop/Armario/Entrada.vhd|
+Z18 !s107 C:/Users/uema/Desktop/Armario/Entrada.vhd|
+R11
+R12
+!s100 aOYIU_z=;Xn;23DaXRN2[3
+!i10b 1
+Aentrada
+R2
+R3
+DEx4 work 7 entrada 0 22 8kYV>O88?2WgEl34PSDFU2
+l34
+L13
+VRYejTjeZ6l@gVLY:9CZ3N3
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 6LABBD7nEB2VJKoiR2lO=3
+!i10b 1
+Eff_d
+Z19 w1511210408
+R2
+R3
+R4
+Z20 8C:/Users/uema/Desktop/Armario/FF_D.vhd
+Z21 FC:/Users/uema/Desktop/Armario/FF_D.vhd
+l0
+L4
+VmNlC@`[f9ME2l^3Km2EeX1
+R7
+31
+Z22 !s108 1511386026.882000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/uema/Desktop/Armario/FF_D.vhd|
+Z24 !s107 C:/Users/uema/Desktop/Armario/FF_D.vhd|
+R11
+R12
+!s100 jQ8`E0ko?IY;Iez3i=;;:1
+!i10b 1
+Asave
+R2
+R3
+DEx4 work 4 ff_d 0 22 mNlC@`[f9ME2l^3Km2EeX1
+l11
+L9
+Vm8`K6nX@:iz[WoY8QY0]<2
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 ^^Te:RJGCHMj5DRYdHEzd1
+!i10b 1
+Ereg4bits
+Z25 w1511384530
+R2
+R3
+R4
+Z26 8C:/Users/uema/Desktop/Armario/Reg4Bits.vhd
+Z27 FC:/Users/uema/Desktop/Armario/Reg4Bits.vhd
+l0
+L4
+V]n1Ag@C`Em@ekGc>FVdIg1
+R7
+31
+Z28 !s108 1511386026.641000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/uema/Desktop/Armario/Reg4Bits.vhd|
+Z30 !s107 C:/Users/uema/Desktop/Armario/Reg4Bits.vhd|
+R11
+R12
+!s100 JGK3T8?G]6TK2iz;lECFW1
+!i10b 1
+Areg4bits
+R2
+R3
+DEx4 work 8 reg4bits 0 22 ]n1Ag@C`Em@ekGc>FVdIg1
+l17
+L10
+VeYBB:5HLD``fFaN?[5T7T3
+R7
+31
+R28
+R29
+R30
+R11
+R12
+!s100 dYa`=?]Y=5I3[31Bdf:TO0
+!i10b 1
