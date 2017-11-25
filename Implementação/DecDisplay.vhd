@@ -1,4 +1,4 @@
-LIBRARY IEEE;
+Library IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY DecDisplay IS
@@ -12,5 +12,6 @@ BEGIN
 	dig0 <=	"1001111" WHEN "00",
 			"0010010" WHEN "01",
 			"0000110" WHEN "10",
-			"1001100" WHEN "11";
+			"1001100" WHEN "11",
+			"1111111" WHEN others;
 END DecDisplay;

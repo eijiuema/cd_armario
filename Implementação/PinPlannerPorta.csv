@@ -1,4 +1,4 @@
-# Copyright (C) 1991-2013 Altera Corporation
+# Copyright (C) 1991-2012 Altera Corporation
 # Your use of Altera Corporation's design tools, logic functions 
 # and other software and tools, and its AMPP partner logic 
 # functions, and any output files from any of the foregoing 
@@ -12,21 +12,21 @@
 # Altera or its authorized distributors.  Please refer to the 
 # applicable agreement for further details.
 
-# Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-# File: C:\Users\uema\Desktop\Armario\PinPlannerPorta.csv
-# Generated on: Thu Nov 23 01:26:51 2017
+# Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+# File: C:\Users\Aluno\Desktop\Armário - 23-11\PinPlannerPorta.csv
+# Generated on: Thu Nov 23 14:44:51 2017
 
 # Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
 
 To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Differential Pair
-clr,Input,PIN_N23,5,B5_N1,PIN_G13,,,,
-enF,Input,PIN_AD13,8,B8_N0,PIN_G14,,,,
-enM,Input,PIN_AF14,7,B7_N1,PIN_F14,,,,
-fechar,Input,PIN_P23,6,B6_N0,PIN_W26,,,,
-s[3],Input,PIN_N25,5,B5_N1,PIN_B14,,,,
-s[2],Input,PIN_N26,5,B5_N1,PIN_D14,,,,
-s[1],Input,PIN_P25,6,B6_N0,PIN_D13,,,,
-s[0],Input,PIN_AE14,7,B7_N1,PIN_C13,,,,
-Sc,Output,PIN_AF22,7,B7_N0,PIN_C17,,,,
-Sp,Output,PIN_AE22,7,B7_N0,PIN_A14,,,,
-ss,Input,PIN_G26,5,B5_N0,PIN_B16,,,,
+clr,Input,PIN_V1,1,B1_N0,PIN_V1,,,,
+enF,Input,PIN_AD13,8,B8_N0,PIN_AD13,,,,
+enM,Input,PIN_AF14,7,B7_N1,PIN_AF14,,,,
+fechar,Input,PIN_U4,1,B1_N0,PIN_U4,,,,
+s[3],Input,PIN_AE14,7,B7_N1,PIN_AE14,,,,
+s[2],Input,PIN_P25,6,B6_N0,PIN_P25,,,,
+s[1],Input,PIN_N26,5,B5_N1,PIN_N26,,,,
+s[0],Input,PIN_N25,5,B5_N1,PIN_N25,,,,
+Sc,Output,PIN_AF22,7,B7_N0,PIN_AF22,,,,
+Sp,Output,PIN_AE22,7,B7_N0,PIN_AE22,,,,
+ss,Input,PIN_V2,1,B1_N0,PIN_V2,,,,

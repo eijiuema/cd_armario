@@ -1,4 +1,4 @@
-LIBRARY IEEE;
+Library IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY Entrada IS
@@ -35,19 +35,19 @@ COMPONENT Integrador
 		 out_sp, out_sc						: OUT STD_LOGIC);
 END COMPONENT;
 
-SIGNAL dec_b, reg_b, reg_sn, s_sp, s_sc	: STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL reg_clear, valid_s 				: STD_LOGIC;
+SIGNAL dec_b, reg_b, reg_sn, s_sp, s_sc : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL reg_clear, invalid_s 		: STD_LOGIC;
 
 BEGIN
 
-	reg_clear <= NOT(cancel AND reset);
+	reg_clear <= NOT(cancel OR reset);
 
-	valid_s <= (reg_b(0) AND reg_b(1) AND reg_b(2) AND reg_b(3)) OR NOT(reg_b(0) OR reg_b(1) OR reg_b(2) OR reg_b(3));
+	invalid_s <= (reg_sn(0) AND reg_sn(1) AND reg_sn(2) AND reg_sn(3)) OR NOT(reg_sn(0) OR reg_sn(1) OR reg_sn(2) OR reg_sn(3));
 
-	out_b(0) <= reg_b(0) AND valid_s;
-	out_b(1) <= reg_b(1) AND valid_s;
-	out_b(2) <= reg_b(2) AND valid_s;
-	out_b(3) <= reg_b(3) AND valid_s;
+	out_b(0) <= reg_b(0) AND NOT invalid_s;
+	out_b(1) <= reg_b(1) AND NOT invalid_s;
+	out_b(2) <= reg_b(2) AND NOT invalid_s;
+	out_b(3) <= reg_b(3) AND NOT invalid_s;
 
 	out_sn <= reg_sn;
 
@@ -68,10 +68,10 @@ BEGIN
 	PORT MAP(valor => in_b, dig0 => dec_display);
 
 	regButtons1 : Reg4Bits
-	PORT MAP(d => dec_b, clock => ok, clear => reg_clear, q => reg_b);
+	PORT MAP(d => dec_b, clock => clock, clear => reg_clear, q => reg_b);
 
 	regSenha1 : Reg4Bits
-	PORT MAP(d => in_sn, clock => ok, clear => reg_clear, q => reg_sn);
+	PORT MAP(d => in_sn, clock => clock, clear => reg_clear, q => reg_sn);
 
 	Integrador1 : Integrador
 	PORT MAP(clock => clock, reset => reset, fechar => fechar, set => ok, clr => cancel, bi => reg_b(0), s => reg_sn, out_sp => s_sp(0), out_sc => s_sc(0));
@@ -84,4 +84,5 @@ BEGIN
 
 	Integrador4 : Integrador
 	PORT MAP(clock => clock, reset => reset, fechar => fechar, set => ok, clr => cancel, bi => reg_b(3), s => reg_sn, out_sp => s_sp(3), out_sc => s_sc(3));
+
 END entrada;

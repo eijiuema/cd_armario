@@ -1,4 +1,4 @@
-LIBRARY IEEE;
+Library IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY AbreFecha IS
@@ -11,7 +11,7 @@ ARCHITECTURE af OF AbreFecha IS
 BEGIN
 	PROCESS(enF,fechar)
 	BEGIN
-		IF enF = '1' THEN
+		IF enF = '0' THEN
 			Sp <= '1';
 		ELSIF fechar'EVENT AND fechar = '1' THEN
 			Sp <= '0';
