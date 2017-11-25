@@ -43,7 +43,7 @@ BEGIN
 						estado <= aberto_s;
 					END IF;
 				WHEN fechado =>
-					IF bi = '1' AND Sp = '0' AND Sc = '1' THEN
+					IF set = '1' AND bi = '1' AND Sp = '0' AND Sc = '1' THEN
 						estado <= aberto;
 					ELSE
 						estado <= fechado;
