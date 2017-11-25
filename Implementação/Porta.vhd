@@ -30,7 +30,7 @@ BEGIN
 	e_clr <= NOT(clr AND enM);
 	e_fechar <= fechar AND enM;
 	
-	Sc <= (s(0) XNOR reg_s(0)) AND (s(1) XNOR reg_s(1)) AND (s(2) XNOR reg_s(2)) AND (s(3) XNOR reg_s(3));
+	Sc <= EnM AND (s(0) XNOR reg_s(0)) AND (s(1) XNOR reg_s(1)) AND (s(2) XNOR reg_s(2)) AND (s(3) XNOR reg_s(3));
 
 	regSenha1 : Reg4Bits
 	PORT MAP(d => s, clock => e_ss, clear => e_clr, q => reg_s);

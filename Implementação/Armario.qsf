@@ -52,23 +52,12 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_location_assignment PIN_U4 -to fechar
-set_location_assignment PIN_V1 -to cancel
+set_location_assignment PIN_N25 -to fechar
+set_location_assignment PIN_P23 -to cancel
 set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
-set_location_assignment PIN_V1 -to clr
-set_location_assignment PIN_AD13 -to enF
-set_location_assignment PIN_AF14 -to enM
-set_location_assignment PIN_AE14 -to s[3]
-set_location_assignment PIN_P25 -to s[2]
-set_location_assignment PIN_N26 -to s[1]
-set_location_assignment PIN_N25 -to s[0]
-set_location_assignment PIN_AF22 -to Sc
-set_location_assignment PIN_AE22 -to Sp
-set_location_assignment PIN_V2 -to ss
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -80,4 +69,33 @@ set_global_assignment -name VHDL_FILE FF_D.vhd
 set_global_assignment -name VHDL_FILE Entrada.vhd
 set_global_assignment -name VHDL_FILE Porta.vhd
 set_global_assignment -name VHDL_FILE DecDisplay.vhd
+set_location_assignment PIN_V2 -to in_b[1]
+set_location_assignment PIN_V1 -to in_b[0]
+set_location_assignment PIN_U4 -to in_sn[3]
+set_location_assignment PIN_U3 -to in_sn[2]
+set_location_assignment PIN_T7 -to in_sn[1]
+set_location_assignment PIN_P2 -to in_sn[0]
+set_location_assignment PIN_W26 -to ok
+set_location_assignment PIN_N23 -to reset
+set_location_assignment PIN_Y12 -to out_sc
+set_location_assignment PIN_Y18 -to out_b[3]
+set_location_assignment PIN_U17 -to out_b[2]
+set_location_assignment PIN_V18 -to out_b[1]
+set_location_assignment PIN_AF22 -to out_b[0]
+set_location_assignment PIN_AA20 -to out_sp[3]
+set_location_assignment PIN_U18 -to out_sp[2]
+set_location_assignment PIN_W19 -to out_sp[1]
+set_location_assignment PIN_AE22 -to out_sp[0]
+set_location_assignment PIN_AD22 -to out_sn[3]
+set_location_assignment PIN_AE12 -to out_sn[2]
+set_location_assignment PIN_AE13 -to out_sn[1]
+set_location_assignment PIN_AF13 -to out_sn[0]
+set_location_assignment PIN_AF10 -to dec_display[0]
+set_location_assignment PIN_AB12 -to dec_display[1]
+set_location_assignment PIN_AC12 -to dec_display[2]
+set_location_assignment PIN_AD11 -to dec_display[3]
+set_location_assignment PIN_AE11 -to dec_display[4]
+set_location_assignment PIN_V14 -to dec_display[5]
+set_location_assignment PIN_V13 -to dec_display[6]
+set_location_assignment PIN_D13 -to clock
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

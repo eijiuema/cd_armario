@@ -1,5 +1,5 @@
 Fitter report for Armario
-Fri Nov 24 23:40:24 2017
+Sat Nov 25 00:33:33 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,17 +10,17 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Ignored Assignments
-  6. Incremental Compilation Preservation Summary
-  7. Incremental Compilation Partition Settings
-  8. Incremental Compilation Placement Preservation
-  9. Pin-Out File
- 10. Fitter Resource Usage Summary
- 11. Fitter Partition Statistics
- 12. Input Pins
- 13. Output Pins
- 14. I/O Bank Usage
- 15. All Package Pins
+  5. Incremental Compilation Preservation Summary
+  6. Incremental Compilation Partition Settings
+  7. Incremental Compilation Placement Preservation
+  8. Pin-Out File
+  9. Fitter Resource Usage Summary
+ 10. Fitter Partition Statistics
+ 11. Input Pins
+ 12. Output Pins
+ 13. I/O Bank Usage
+ 14. All Package Pins
+ 15. Clock Delay Control Summary
  16. Output Pin Default Load For Reported TCO
  17. Fitter Resource Utilization by Entity
  18. Delay Chain Summary
@@ -65,18 +65,18 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov 24 23:40:24 2017      ;
+; Fitter Status                      ; Successful - Sat Nov 25 00:33:33 2017      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; Armario                                    ;
 ; Top-level Entity Name              ; Entrada                                    ;
 ; Family                             ; Cyclone II                                 ;
 ; Device                             ; EP2C35F672C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 77 / 33,216 ( < 1 % )                      ;
+; Total logic elements               ; 80 / 33,216 ( < 1 % )                      ;
 ;     Total combinational functions  ; 67 / 33,216 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 36 / 33,216 ( < 1 % )                      ;
 ; Total registers                    ; 36                                         ;
-; Total pins                         ; 34 / 475 ( 7 % )                           ;
+; Total pins                         ; 31 / 475 ( 7 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                             ;
@@ -146,24 +146,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------+
-; Ignored Assignments                                                                    ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Name     ; Ignored Entity ; Ignored From ; Ignored To ; Ignored Value ; Ignored Source ;
-+----------+----------------+--------------+------------+---------------+----------------+
-; Location ;                ;              ; Sc         ; PIN_AF22      ; QSF Assignment ;
-; Location ;                ;              ; Sp         ; PIN_AE22      ; QSF Assignment ;
-; Location ;                ;              ; clr        ; PIN_V1        ; QSF Assignment ;
-; Location ;                ;              ; enF        ; PIN_AD13      ; QSF Assignment ;
-; Location ;                ;              ; enM        ; PIN_AF14      ; QSF Assignment ;
-; Location ;                ;              ; s[0]       ; PIN_N25       ; QSF Assignment ;
-; Location ;                ;              ; s[1]       ; PIN_N26       ; QSF Assignment ;
-; Location ;                ;              ; s[2]       ; PIN_P25       ; QSF Assignment ;
-; Location ;                ;              ; s[3]       ; PIN_AE14      ; QSF Assignment ;
-; Location ;                ;              ; ss         ; PIN_V2        ; QSF Assignment ;
-+----------+----------------+--------------+------------+---------------+----------------+
-
-
 +----------------------------------------------+
 ; Incremental Compilation Preservation Summary ;
 +---------------------+------------------------+
@@ -210,16 +192,16 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 77 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 41                    ;
-;     -- Register only                        ; 10                    ;
-;     -- Combinational with a register        ; 26                    ;
+; Total logic elements                        ; 80 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 44                    ;
+;     -- Register only                        ; 13                    ;
+;     -- Combinational with a register        ; 23                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 33                    ;
-;     -- 3 input functions                    ; 2                     ;
-;     -- <=2 input functions                  ; 32                    ;
-;     -- Register only                        ; 10                    ;
+;     -- 4 input functions                    ; 34                    ;
+;     -- 3 input functions                    ; 5                     ;
+;     -- <=2 input functions                  ; 28                    ;
+;     -- Register only                        ; 13                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
 ;     -- normal mode                          ; 67                    ;
@@ -229,27 +211,27 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ;     -- Dedicated logic registers            ; 36 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 8 / 2,076 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 9 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 34 / 475 ( 7 % )      ;
-;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
+; I/O pins                                    ; 31 / 475 ( 7 % )      ;
+;     -- Clock pins                           ; 3 / 8 ( 38 % )        ;
 ;                                             ;                       ;
-; Global signals                              ; 7                     ;
+; Global signals                              ; 8                     ;
 ; M4Ks                                        ; 0 / 105 ( 0 % )       ;
 ; Total block memory bits                     ; 0 / 483,840 ( 0 % )   ;
 ; Total block memory implementation bits      ; 0 / 483,840 ( 0 % )   ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )        ;
 ; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 7 / 16 ( 44 % )       ;
+; Global clocks                               ; 8 / 16 ( 50 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%          ;
-; Maximum fan-out                             ; 15                    ;
-; Highest non-global fan-out                  ; 15                    ;
-; Total fan-out                               ; 340                   ;
-; Average fan-out                             ; 2.17                  ;
+; Maximum fan-out                             ; 14                    ;
+; Highest non-global fan-out                  ; 14                    ;
+; Total fan-out                               ; 345                   ;
+; Average fan-out                             ; 2.20                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -262,16 +244,16 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 77 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 41                   ; 0                              ;
-;     -- Register only                        ; 10                   ; 0                              ;
-;     -- Combinational with a register        ; 26                   ; 0                              ;
+; Total logic elements                        ; 80 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 44                   ; 0                              ;
+;     -- Register only                        ; 13                   ; 0                              ;
+;     -- Combinational with a register        ; 23                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 33                   ; 0                              ;
-;     -- 3 input functions                    ; 2                    ; 0                              ;
-;     -- <=2 input functions                  ; 32                   ; 0                              ;
-;     -- Register only                        ; 10                   ; 0                              ;
+;     -- 4 input functions                    ; 34                   ; 0                              ;
+;     -- 3 input functions                    ; 5                    ; 0                              ;
+;     -- <=2 input functions                  ; 28                   ; 0                              ;
+;     -- Register only                        ; 13                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
 ;     -- normal mode                          ; 67                   ; 0                              ;
@@ -280,14 +262,15 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; Total registers                             ; 36                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 36 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 8 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 9 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 34                   ; 0                              ;
+; I/O pins                                    ; 31                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 7 / 20 ( 35 % )      ; 0 / 20 ( 0 % )                 ;
+; Clock control block                         ; 8 / 20 ( 40 % )      ; 0 / 20 ( 0 % )                 ;
+; Clock delay control block                   ; 2 / 16 ( 12 % )      ; 0 / 16 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -296,8 +279,8 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 340                  ; 0                              ;
-;     -- Registered Connections               ; 134                  ; 0                              ;
+;     -- Total Connections                    ; 345                  ; 0                              ;
+;     -- Registered Connections               ; 137                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -305,7 +288,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
 ;     -- Input Ports                          ; 11                   ; 0                              ;
-;     -- Output Ports                         ; 23                   ; 0                              ;
+;     -- Output Ports                         ; 20                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Registered Ports                            ;                      ;                                ;
@@ -329,17 +312,17 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; cancel   ; V1    ; 1        ; 0            ; 12           ; 2           ; 15                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; clock    ; P2    ; 1        ; 0            ; 18           ; 2           ; 5                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; fechar   ; U4    ; 1        ; 0            ; 12           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; in_b[0]  ; D13   ; 3        ; 31           ; 36           ; 3           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; in_b[1]  ; R5    ; 1        ; 0            ; 16           ; 1           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; in_sn[0] ; V3    ; 1        ; 0            ; 11           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; in_sn[1] ; W1    ; 1        ; 0            ; 10           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; in_sn[2] ; R7    ; 1        ; 0            ; 14           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; in_sn[3] ; U5    ; 1        ; 0            ; 9            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; ok       ; T7    ; 1        ; 0            ; 11           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; reset    ; C13   ; 3        ; 31           ; 36           ; 2           ; 2                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; cancel   ; P23   ; 6        ; 65           ; 18           ; 0           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; clock    ; D13   ; 3        ; 31           ; 36           ; 3           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; fechar   ; N25   ; 5        ; 65           ; 19           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; in_b[0]  ; V1    ; 1        ; 0            ; 12           ; 2           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; in_b[1]  ; V2    ; 1        ; 0            ; 12           ; 3           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; in_sn[0] ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; in_sn[1] ; T7    ; 1        ; 0            ; 11           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; in_sn[2] ; U3    ; 1        ; 0            ; 12           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; in_sn[3] ; U4    ; 1        ; 0            ; 12           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; ok       ; W26   ; 6        ; 65           ; 10           ; 2           ; 13                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; reset    ; N23   ; 5        ; 65           ; 20           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -348,29 +331,26 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; dec_display[0] ; R4    ; 1        ; 0            ; 16           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; dec_display[1] ; AA4   ; 1        ; 0            ; 5            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; dec_display[2] ; V4    ; 1        ; 0            ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; dec_display[3] ; T9    ; 1        ; 0            ; 16           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; dec_display[4] ; U1    ; 1        ; 0            ; 13           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; dec_display[5] ; P7    ; 1        ; 0            ; 15           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; dec_display[6] ; P6    ; 1        ; 0            ; 15           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_b[0]       ; U10   ; 1        ; 0            ; 13           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_b[1]       ; U2    ; 1        ; 0            ; 13           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_b[2]       ; T2    ; 1        ; 0            ; 15           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_b[3]       ; T10   ; 1        ; 0            ; 16           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sc[0]      ; R3    ; 1        ; 0            ; 17           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sc[1]      ; Y1    ; 1        ; 0            ; 9            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sc[2]      ; U6    ; 1        ; 0            ; 10           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sc[3]      ; U7    ; 1        ; 0            ; 10           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sn[0]      ; T3    ; 1        ; 0            ; 15           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sn[1]      ; T6    ; 1        ; 0            ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sn[2]      ; U3    ; 1        ; 0            ; 12           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sn[3]      ; V2    ; 1        ; 0            ; 12           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sp[0]      ; W2    ; 1        ; 0            ; 10           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sp[1]      ; U9    ; 1        ; 0            ; 13           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sp[2]      ; R6    ; 1        ; 0            ; 14           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; out_sp[3]      ; T4    ; 1        ; 0            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; dec_display[0] ; AF10  ; 8        ; 24           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; dec_display[1] ; AB12  ; 8        ; 24           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; dec_display[2] ; AC12  ; 8        ; 24           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; dec_display[3] ; AD11  ; 8        ; 27           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; dec_display[4] ; AE11  ; 8        ; 27           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; dec_display[5] ; V14   ; 8        ; 27           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; dec_display[6] ; V13   ; 8        ; 27           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_b[0]       ; AF22  ; 7        ; 59           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_b[1]       ; V18   ; 7        ; 59           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_b[2]       ; U17   ; 7        ; 57           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_b[3]       ; Y18   ; 7        ; 57           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sc         ; Y12   ; 8        ; 29           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sn[0]      ; AF13  ; 8        ; 31           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sn[1]      ; AE13  ; 8        ; 31           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sn[2]      ; AE12  ; 8        ; 31           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sn[3]      ; AD22  ; 7        ; 61           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sp[0]      ; AE22  ; 7        ; 59           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sp[1]      ; W19   ; 7        ; 59           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sp[2]      ; U18   ; 7        ; 57           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; out_sp[3]      ; AA20  ; 7        ; 57           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 +----------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -379,14 +359,14 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 32 / 64 ( 50 % ) ; 3.3V          ; --           ;
+; 1        ; 6 / 64 ( 9 % )   ; 3.3V          ; --           ;
 ; 2        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
-; 3        ; 2 / 56 ( 4 % )   ; 3.3V          ; --           ;
+; 3        ; 1 / 56 ( 2 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 0 / 65 ( 0 % )   ; 3.3V          ; --           ;
-; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
-; 7        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
-; 8        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
+; 5        ; 2 / 65 ( 3 % )   ; 3.3V          ; --           ;
+; 6        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
+; 7        ; 9 / 58 ( 16 % )  ; 3.3V          ; --           ;
+; 8        ; 11 / 56 ( 20 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -422,7 +402,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AA1      ; 107        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA2      ; 106        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA3      ; 117        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AA4      ; 116        ; 1        ; dec_display[1]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA4      ; 116        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA5      ; 120        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA6      ; 130        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA7      ; 129        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -438,7 +418,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AA17     ; 219        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA18     ; 220        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AA19     ;            ;          ; VCCA_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; AA20     ; 230        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AA20     ; 230        ; 7        ; out_sp[3]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AA21     ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA22     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AA23     ; 256        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -456,7 +436,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AB9      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB10     ; 154        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AB11     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AB12     ; 171        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AB12     ; 171        ; 8        ; dec_display[1]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AB13     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB14     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AB15     ; 198        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -482,7 +462,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AC9      ; 163        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC10     ; 164        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC11     ; 168        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC12     ; 172        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AC12     ; 172        ; 8        ; dec_display[2]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC13     ; 185        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AC14     ; 191        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC15     ; 199        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -507,7 +487,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AD8      ; 149        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD9      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD10     ; 167        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD11     ; 173        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD11     ; 173        ; 8        ; dec_display[3]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD12     ; 181        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD13     ; 186        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AD14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -518,7 +498,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AD19     ; 221        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD20     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD21     ; 238        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD22     ; 240        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD22     ; 240        ; 7        ; out_sn[3]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD23     ; 239        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD24     ; 249        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD25     ; 248        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -533,9 +513,9 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AE8      ; 159        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE9      ; 165        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE10     ; 169        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE11     ; 174        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE12     ; 182        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE13     ; 183        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE11     ; 174        ; 8        ; dec_display[4]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AE12     ; 182        ; 8        ; out_sn[2]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AE13     ; 183        ; 8        ; out_sn[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE14     ; 188        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AE15     ; 189        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE16     ; 200        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -544,7 +524,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AE19     ; 214        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE20     ; 224        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE21     ; 228        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE22     ; 236        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE22     ; 236        ; 7        ; out_sp[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE23     ; 244        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE24     ; 247        ; 6        ; ~LVDS150p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AE25     ; 246        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -557,10 +537,10 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AF7      ; 158        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF8      ; 160        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF9      ; 166        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF10     ; 170        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF10     ; 170        ; 8        ; dec_display[0]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF12     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AF13     ; 184        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF13     ; 184        ; 8        ; out_sn[0]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF14     ; 187        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -569,7 +549,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; AF19     ; 213        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF20     ; 223        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF21     ; 227        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF22     ; 235        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF22     ; 235        ; 7        ; out_b[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF23     ; 243        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF24     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF25     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -611,7 +591,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; C10      ; 450        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C13      ; 431        ; 3        ; reset                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C13      ; 431        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C15      ; 421        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C16      ; 418        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -637,7 +617,7 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; D10      ; 449        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; D12      ; 443        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D13      ; 432        ; 3        ; in_b[0]                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D13      ; 432        ; 3        ; clock                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D14      ; 426        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -881,17 +861,17 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; N20      ; 315        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; N23      ; 311        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N23      ; 311        ; 5        ; reset                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N24      ; 310        ; 5        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; N25      ; 309        ; 5        ; fechar                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 67         ; 1        ; clock                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P2       ; 67         ; 1        ; in_sn[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P3       ; 69         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P6       ; 78         ; 1        ; dec_display[6]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; P7       ; 77         ; 1        ; dec_display[5]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P6       ; 78         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P7       ; 77         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P9       ; 46         ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -907,17 +887,17 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; P20      ; 301        ; 6        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ; 300        ; 6        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P23      ; 305        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P23      ; 305        ; 6        ; cancel                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P24      ; 304        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P25      ; 307        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P26      ; 306        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R2       ; 71         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R3       ; 72         ; 1        ; out_sc[0]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R4       ; 73         ; 1        ; dec_display[0]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R5       ; 74         ; 1        ; in_b[1]                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R6       ; 81         ; 1        ; out_sp[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; R7       ; 82         ; 1        ; in_sn[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R3       ; 72         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R4       ; 73         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R5       ; 74         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R6       ; 81         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R7       ; 82         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R8       ; 110        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R9       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; R10      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -938,15 +918,15 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; R25      ; 303        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T1       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; T2       ; 79         ; 1        ; out_b[2]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T3       ; 80         ; 1        ; out_sn[0]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T4       ; 83         ; 1        ; out_sp[3]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T2       ; 79         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T3       ; 80         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T4       ; 83         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T6       ; 93         ; 1        ; out_sn[1]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T7       ; 92         ; 1        ; ok                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T6       ; 93         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T7       ; 92         ; 1        ; in_sn[1]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; T8       ; 111        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T9       ; 76         ; 1        ; dec_display[3]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T10      ; 75         ; 1        ; out_b[3]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T9       ; 76         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T10      ; 75         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; T12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T13      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -963,24 +943,24 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; T24      ; 292        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T25      ; 291        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T26      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; U1       ; 85         ; 1        ; dec_display[4]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U2       ; 84         ; 1        ; out_b[1]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U3       ; 88         ; 1        ; out_sn[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U4       ; 89         ; 1        ; fechar                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; U5       ; 100        ; 1        ; in_sn[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U6       ; 98         ; 1        ; out_sc[2]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U7       ; 99         ; 1        ; out_sc[3]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U1       ; 85         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U2       ; 84         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U3       ; 88         ; 1        ; in_sn[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; U4       ; 89         ; 1        ; in_sn[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; U5       ; 100        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U6       ; 98         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U7       ; 99         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; U9       ; 86         ; 1        ; out_sp[1]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U10      ; 87         ; 1        ; out_b[0]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U9       ; 86         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U10      ; 87         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U12      ; 178        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; U13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U14      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U15      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; U17      ; 231        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; U18      ; 232        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; U17      ; 231        ; 7        ; out_b[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; U18      ; 232        ; 7        ; out_sp[2]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; U19      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U20      ; 280        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U21      ; 279        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -989,10 +969,10 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; U24      ; 283        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U25      ; 285        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U26      ; 286        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V1       ; 90         ; 1        ; cancel                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; V2       ; 91         ; 1        ; out_sn[3]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V3       ; 95         ; 1        ; in_sn[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V4       ; 94         ; 1        ; dec_display[2]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V1       ; 90         ; 1        ; in_b[0]                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V2       ; 91         ; 1        ; in_b[1]                                  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V3       ; 95         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V4       ; 94         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V5       ; 104        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V6       ; 105        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V7       ; 112        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1001,12 +981,12 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; V10      ; 141        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V11      ; 177        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; V12      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; V13      ; 176        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V14      ; 175        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V13      ; 176        ; 8        ; dec_display[6]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; V14      ; 175        ; 8        ; dec_display[5]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; V15      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V16      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V17      ; 218        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; V18      ; 233        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; V18      ; 233        ; 7        ; out_b[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; V19      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V20      ; 251        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V21      ; 252        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1015,8 +995,8 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; V24      ; 276        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V25      ; 277        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V26      ; 278        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W1       ; 97         ; 1        ; in_sn[1]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; W2       ; 96         ; 1        ; out_sp[0]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W1       ; 97         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W2       ; 96         ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W3       ; 102        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W4       ; 101        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1033,15 +1013,15 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; W16      ; 204        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W17      ; 217        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; W18      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; W19      ; 234        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; W19      ; 234        ; 7        ; out_sp[1]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W20      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W21      ; 253        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W22      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W23      ; 272        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W26      ; 274        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y1       ; 103        ; 1        ; out_sc[1]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W26      ; 274        ; 6        ; ok                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; Y1       ; 103        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y4       ; 109        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1052,13 +1032,13 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; Y9       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y10      ; 146        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y11      ; 156        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; Y12      ; 180        ; 8        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; Y12      ; 180        ; 8        ; out_sc                                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y13      ; 193        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y14      ; 195        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y15      ; 196        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y16      ; 210        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; Y17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y18      ; 229        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; Y18      ; 229        ; 7        ; out_b[3]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; Y19      ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y20      ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y21      ; 250        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1069,6 +1049,16 @@ The pin-out file can be found in C:/Users/uema/Documents/GitHub/cd_armario/Imple
 ; Y26      ; 268        ; 6        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++----------------------------------------------------------------------------------------------+
+; Clock Delay Control Summary                                                                  ;
++----------------------+------------+-----------------+------------------+---------------------+
+; Name                 ; Source I/O ; Location        ; Delay Chain Mode ; Delay Chain Setting ;
++----------------------+------------+-----------------+------------------+---------------------+
+; ok~clk_delay_ctrl    ; ok         ; CLKDELAYCTRL_G7 ; none             ; N/A                 ;
+; reset~clk_delay_ctrl ; reset      ; CLKDELAYCTRL_G4 ; none             ; N/A                 ;
++----------------------+------------+-----------------+------------------+---------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -1113,8 +1103,8 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                        ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------+--------------+
-; |Entrada                        ; 77 (6)      ; 36 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 34   ; 0            ; 41 (6)       ; 10 (0)            ; 26 (0)           ; |Entrada                                                                   ;              ;
-;    |DecButtons:decButtons1|     ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; |Entrada|DecButtons:decButtons1                                            ;              ;
+; |Entrada                        ; 80 (7)      ; 36 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 31   ; 0            ; 44 (7)       ; 13 (0)            ; 23 (0)           ; |Entrada                                                                   ;              ;
+;    |DecButtons:decButtons1|     ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; |Entrada|DecButtons:decButtons1                                            ;              ;
 ;    |DecDisplay:decDisplay1|     ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |Entrada|DecDisplay:decDisplay1                                            ;              ;
 ;    |Integrador:Integrador1|     ; 15 (7)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (5)        ; 1 (0)             ; 6 (2)            ; |Entrada|Integrador:Integrador1                                            ;              ;
 ;       |Porta:Porta1|            ; 8 (3)       ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 1 (0)             ; 4 (3)            ; |Entrada|Integrador:Integrador1|Porta:Porta1                               ;              ;
@@ -1122,36 +1112,36 @@ Note: User assignments will override these defaults. The user specified values a
 ;          |Reg4Bits:regSenha1|   ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 3 (0)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
 ;             |FF_D:FF_B0|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
 ;             |FF_D:FF_B1|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
-;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
-;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
-;    |Integrador:Integrador2|     ; 16 (7)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (5)        ; 2 (0)             ; 5 (2)            ; |Entrada|Integrador:Integrador2                                            ;              ;
+;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Integrador:Integrador2|     ; 15 (6)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (4)        ; 2 (0)             ; 5 (2)            ; |Entrada|Integrador:Integrador2                                            ;              ;
 ;       |Porta:Porta1|            ; 9 (4)       ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 2 (0)             ; 3 (2)            ; |Entrada|Integrador:Integrador2|Porta:Porta1                               ;              ;
 ;          |AbreFecha:abreFecha1| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
 ;          |Reg4Bits:regSenha1|   ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 2 (0)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
-;             |FF_D:FF_B0|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
-;             |FF_D:FF_B1|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
+;             |FF_D:FF_B0|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
+;             |FF_D:FF_B1|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
 ;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
 ;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
-;    |Integrador:Integrador3|     ; 14 (6)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (4)        ; 1 (0)             ; 6 (2)            ; |Entrada|Integrador:Integrador3                                            ;              ;
-;       |Porta:Porta1|            ; 8 (3)       ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 1 (0)             ; 4 (3)            ; |Entrada|Integrador:Integrador3|Porta:Porta1                               ;              ;
+;    |Integrador:Integrador3|     ; 15 (6)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (4)        ; 2 (0)             ; 5 (2)            ; |Entrada|Integrador:Integrador3                                            ;              ;
+;       |Porta:Porta1|            ; 9 (4)       ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 2 (0)             ; 3 (2)            ; |Entrada|Integrador:Integrador3|Porta:Porta1                               ;              ;
 ;          |AbreFecha:abreFecha1| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
-;          |Reg4Bits:regSenha1|   ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 3 (0)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
-;             |FF_D:FF_B0|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
+;          |Reg4Bits:regSenha1|   ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 2 (0)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
+;             |FF_D:FF_B0|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
 ;             |FF_D:FF_B1|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
-;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
-;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
-;    |Integrador:Integrador4|     ; 14 (6)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (4)        ; 1 (0)             ; 6 (2)            ; |Entrada|Integrador:Integrador4                                            ;              ;
-;       |Porta:Porta1|            ; 8 (3)       ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 1 (0)             ; 4 (3)            ; |Entrada|Integrador:Integrador4|Porta:Porta1                               ;              ;
+;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Integrador:Integrador4|     ; 15 (6)      ; 7 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (4)        ; 2 (0)             ; 5 (2)            ; |Entrada|Integrador:Integrador4                                            ;              ;
+;       |Porta:Porta1|            ; 9 (4)       ; 5 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 2 (0)             ; 3 (2)            ; |Entrada|Integrador:Integrador4|Porta:Porta1                               ;              ;
 ;          |AbreFecha:abreFecha1| ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
-;          |Reg4Bits:regSenha1|   ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 3 (0)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
+;          |Reg4Bits:regSenha1|   ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 2 (0)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
 ;             |FF_D:FF_B0|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
-;             |FF_D:FF_B1|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
-;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
-;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
-;    |Reg4Bits:regButtons1|       ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 3 (0)            ; |Entrada|Reg4Bits:regButtons1                                              ;              ;
+;             |FF_D:FF_B1|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
+;             |FF_D:FF_B2|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Reg4Bits:regButtons1|       ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 2 (0)            ; |Entrada|Reg4Bits:regButtons1                                              ;              ;
 ;       |FF_D:FF_B0|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B0                                   ;              ;
 ;       |FF_D:FF_B1|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B1                                   ;              ;
-;       |FF_D:FF_B2|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B2                                   ;              ;
+;       |FF_D:FF_B2|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B2                                   ;              ;
 ;       |FF_D:FF_B3|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B3                                   ;              ;
 ;    |Reg4Bits:regSenha1|         ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (0)             ; 0 (0)            ; |Entrada|Reg4Bits:regSenha1                                                ;              ;
 ;       |FF_D:FF_B0|              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |Entrada|Reg4Bits:regSenha1|FF_D:FF_B0                                     ;              ;
@@ -1167,14 +1157,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+----------+---------------+---------------+-----------------------+-----+
 ; Name           ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +----------------+----------+---------------+---------------+-----------------------+-----+
+; out_sc         ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_sp[0]      ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_sp[1]      ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_sp[2]      ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_sp[3]      ; Output   ; --            ; --            ; --                    ; --  ;
-; out_sc[0]      ; Output   ; --            ; --            ; --                    ; --  ;
-; out_sc[1]      ; Output   ; --            ; --            ; --                    ; --  ;
-; out_sc[2]      ; Output   ; --            ; --            ; --                    ; --  ;
-; out_sc[3]      ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_b[0]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_b[1]       ; Output   ; --            ; --            ; --                    ; --  ;
 ; out_b[2]       ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1190,78 +1177,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; dec_display[2] ; Output   ; --            ; --            ; --                    ; --  ;
 ; dec_display[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; dec_display[0] ; Output   ; --            ; --            ; --                    ; --  ;
-; in_b[0]        ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; in_b[0]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; in_b[1]        ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; in_sn[0]       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; clock          ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; ok             ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; cancel         ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; reset          ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; reset          ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; in_sn[0]       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; in_sn[1]       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; in_sn[2]       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; in_sn[3]       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; clock          ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; fechar         ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; ok             ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +----------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-----------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                    ;
-+-----------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                 ; Pad To Core Index ; Setting ;
-+-----------------------------------------------------+-------------------+---------+
-; in_b[0]                                             ;                   ;         ;
-; in_b[1]                                             ;                   ;         ;
-;      - DecButtons:decButtons1|dec_b[0]              ; 0                 ; 6       ;
-;      - DecButtons:decButtons1|dec_b[1]~0            ; 0                 ; 6       ;
-;      - DecDisplay:decDisplay1|Mux3~0                ; 0                 ; 6       ;
-;      - DecDisplay:decDisplay1|Mux2~0                ; 0                 ; 6       ;
-;      - DecButtons:decButtons1|dec_b[1]~1            ; 0                 ; 6       ;
-;      - DecButtons:decButtons1|dec_b[1]~2            ; 0                 ; 6       ;
-; in_sn[0]                                            ;                   ;         ;
-;      - Reg4Bits:regSenha1|FF_D:FF_B0|QS~feeder      ; 1                 ; 6       ;
-; clock                                               ;                   ;         ;
-; cancel                                              ;                   ;         ;
-;      - reg_clear~0                                  ; 1                 ; 6       ;
-;      - Integrador:Integrador1|Selector0~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador1|Selector0~2           ; 0                 ; 6       ;
-;      - Integrador:Integrador2|Selector0~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador2|Selector0~2           ; 0                 ; 6       ;
-;      - Integrador:Integrador1|Selector1~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador1|Selector1~1           ; 0                 ; 6       ;
-;      - Integrador:Integrador2|Selector1~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador2|Selector1~1           ; 0                 ; 6       ;
-;      - Integrador:Integrador3|Selector1~0           ; 1                 ; 6       ;
-;      - Integrador:Integrador3|Selector1~1           ; 1                 ; 6       ;
-;      - Integrador:Integrador4|Selector1~0           ; 1                 ; 6       ;
-;      - Integrador:Integrador4|Selector1~1           ; 1                 ; 6       ;
-;      - Integrador:Integrador4|Selector0~1           ; 1                 ; 6       ;
-;      - Integrador:Integrador3|Selector0~1           ; 1                 ; 6       ;
-; reset                                               ;                   ;         ;
-; in_sn[1]                                            ;                   ;         ;
-;      - Reg4Bits:regSenha1|FF_D:FF_B1|QS~feeder      ; 1                 ; 6       ;
-; in_sn[2]                                            ;                   ;         ;
-;      - Reg4Bits:regSenha1|FF_D:FF_B2|QS~feeder      ; 1                 ; 6       ;
-; in_sn[3]                                            ;                   ;         ;
-;      - Reg4Bits:regSenha1|FF_D:FF_B3|QS~feeder      ; 0                 ; 6       ;
-; fechar                                              ;                   ;         ;
-;      - Integrador:Integrador1|Porta:Porta1|e_fechar ; 0                 ; 0       ;
-;      - Integrador:Integrador2|Porta:Porta1|e_fechar ; 0                 ; 0       ;
-;      - Integrador:Integrador3|Porta:Porta1|e_fechar ; 1                 ; 0       ;
-;      - Integrador:Integrador4|Porta:Porta1|e_fechar ; 0                 ; 0       ;
-;      - Integrador:Integrador1|Selector1~1           ; 1                 ; 0       ;
-;      - Integrador:Integrador2|Selector1~1           ; 1                 ; 0       ;
-;      - Integrador:Integrador3|Selector1~1           ; 0                 ; 0       ;
-;      - Integrador:Integrador4|Selector1~1           ; 1                 ; 0       ;
-; ok                                                  ;                   ;         ;
-;      - Integrador:Integrador1|Selector0~2           ; 0                 ; 6       ;
-;      - Integrador:Integrador2|Selector0~2           ; 0                 ; 6       ;
-;      - Integrador:Integrador1|Selector1~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador2|Selector1~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador3|Selector1~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador4|Selector1~0           ; 0                 ; 6       ;
-;      - Integrador:Integrador4|Selector0~2           ; 0                 ; 6       ;
-;      - Integrador:Integrador3|Selector0~2           ; 0                 ; 6       ;
-+-----------------------------------------------------+-------------------+---------+
++------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                               ;
++------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                            ; Pad To Core Index ; Setting ;
++------------------------------------------------+-------------------+---------+
+; in_b[0]                                        ;                   ;         ;
+;      - DecButtons:decButtons1|dec_b[0]         ; 0                 ; 6       ;
+;      - DecButtons:decButtons1|dec_b[1]~0       ; 0                 ; 6       ;
+;      - DecDisplay:decDisplay1|Mux3~0           ; 0                 ; 6       ;
+;      - DecDisplay:decDisplay1|Mux2~0           ; 0                 ; 6       ;
+;      - DecButtons:decButtons1|dec_b[1]~1       ; 0                 ; 6       ;
+;      - DecButtons:decButtons1|dec_b[1]~2       ; 0                 ; 6       ;
+; in_b[1]                                        ;                   ;         ;
+;      - DecButtons:decButtons1|dec_b[0]         ; 1                 ; 6       ;
+;      - DecButtons:decButtons1|dec_b[1]~0       ; 1                 ; 6       ;
+;      - DecDisplay:decDisplay1|Mux3~0           ; 1                 ; 6       ;
+;      - DecDisplay:decDisplay1|Mux2~0           ; 1                 ; 6       ;
+;      - DecButtons:decButtons1|dec_b[1]~1       ; 1                 ; 6       ;
+;      - DecButtons:decButtons1|dec_b[1]~2       ; 1                 ; 6       ;
+; ok                                             ;                   ;         ;
+;      - Reg4Bits:regButtons1|FF_D:FF_B0|QS      ; 0                 ; 0       ;
+;      - Reg4Bits:regButtons1|FF_D:FF_B1|QS      ; 0                 ; 0       ;
+;      - Reg4Bits:regButtons1|FF_D:FF_B2|QS      ; 0                 ; 0       ;
+;      - Reg4Bits:regButtons1|FF_D:FF_B3|QS      ; 0                 ; 0       ;
+;      - Integrador:Integrador1|Selector0~2      ; 0                 ; 0       ;
+;      - Integrador:Integrador1|Selector1~0      ; 0                 ; 0       ;
+;      - Integrador:Integrador2|Selector1~0      ; 0                 ; 0       ;
+;      - Integrador:Integrador3|Selector1~0      ; 0                 ; 0       ;
+;      - Integrador:Integrador4|Selector1~0      ; 0                 ; 0       ;
+;      - Integrador:Integrador4|Selector0~2      ; 0                 ; 0       ;
+;      - Integrador:Integrador3|Selector0~2      ; 0                 ; 0       ;
+;      - Integrador:Integrador2|Selector0~2      ; 0                 ; 0       ;
+; cancel                                         ;                   ;         ;
+;      - reg_clear~0                             ; 0                 ; 6       ;
+;      - Integrador:Integrador1|Selector0~0      ; 0                 ; 6       ;
+;      - Integrador:Integrador1|Selector0~2      ; 0                 ; 6       ;
+;      - Integrador:Integrador1|Selector1~0      ; 0                 ; 6       ;
+;      - Integrador:Integrador1|Selector1~1      ; 0                 ; 6       ;
+;      - Integrador:Integrador2|Selector1~0      ; 0                 ; 6       ;
+;      - Integrador:Integrador2|Selector1~1      ; 0                 ; 6       ;
+;      - Integrador:Integrador3|Selector1~0      ; 0                 ; 6       ;
+;      - Integrador:Integrador3|Selector1~1      ; 0                 ; 6       ;
+;      - Integrador:Integrador4|Selector1~0      ; 0                 ; 6       ;
+;      - Integrador:Integrador4|Selector1~1      ; 0                 ; 6       ;
+;      - Integrador:Integrador4|Selector0~1      ; 0                 ; 6       ;
+;      - Integrador:Integrador3|Selector0~1      ; 0                 ; 6       ;
+;      - Integrador:Integrador2|Selector0~1      ; 0                 ; 6       ;
+; reset                                          ;                   ;         ;
+;      - reg_clear~0                             ; 0                 ; 6       ;
+; in_sn[0]                                       ;                   ;         ;
+; in_sn[1]                                       ;                   ;         ;
+;      - Reg4Bits:regSenha1|FF_D:FF_B1|QS~feeder ; 0                 ; 6       ;
+; in_sn[2]                                       ;                   ;         ;
+;      - Reg4Bits:regSenha1|FF_D:FF_B2|QS~feeder ; 0                 ; 6       ;
+; in_sn[3]                                       ;                   ;         ;
+;      - Reg4Bits:regSenha1|FF_D:FF_B3|QS        ; 1                 ; 6       ;
+; clock                                          ;                   ;         ;
+; fechar                                         ;                   ;         ;
++------------------------------------------------+-------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1269,26 +1257,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                         ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Integrador:Integrador1|Porta:Porta1|e_clr~0  ; LCCOMB_X3_Y14_N24  ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador1|Porta:Porta1|e_fechar ; LCCOMB_X2_Y13_N18  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador1|Porta:Porta1|e_ss     ; LCCOMB_X2_Y13_N0   ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; Integrador:Integrador1|estado.aberto         ; LCFF_X2_Y13_N9     ; 4       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador2|Porta:Porta1|e_clr~0  ; LCCOMB_X2_Y13_N30  ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador2|Porta:Porta1|e_fechar ; LCCOMB_X1_Y13_N26  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador2|Porta:Porta1|e_ss     ; LCCOMB_X1_Y13_N22  ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; Integrador:Integrador2|estado.aberto         ; LCFF_X2_Y13_N11    ; 4       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador3|Porta:Porta1|e_clr~0  ; LCCOMB_X2_Y14_N26  ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador3|Porta:Porta1|e_fechar ; LCCOMB_X3_Y14_N18  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador3|Porta:Porta1|e_ss     ; LCCOMB_X1_Y14_N24  ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; Integrador:Integrador3|estado.aberto         ; LCFF_X1_Y14_N15    ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador4|Porta:Porta1|e_clr~0  ; LCCOMB_X2_Y14_N20  ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador4|Porta:Porta1|e_fechar ; LCCOMB_X1_Y14_N18  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; Integrador:Integrador4|Porta:Porta1|e_ss     ; LCCOMB_X1_Y14_N8   ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; Integrador:Integrador4|estado.aberto         ; LCFF_X1_Y14_N3     ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; clock                                        ; PIN_P2             ; 5       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clock                                        ; PIN_P2             ; 12      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; reg_clear~0                                  ; LCCOMB_X30_Y12_N24 ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK15           ; --                        ;
-; reset                                        ; PIN_C13            ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; Integrador:Integrador1|Porta:Porta1|e_clr~0  ; LCCOMB_X64_Y10_N10 ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador1|Porta:Porta1|e_fechar ; LCCOMB_X64_Y10_N16 ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador1|Porta:Porta1|e_ss     ; LCCOMB_X63_Y10_N14 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
+; Integrador:Integrador1|estado.aberto         ; LCFF_X64_Y10_N31   ; 4       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador2|Porta:Porta1|e_clr~0  ; LCCOMB_X64_Y12_N12 ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador2|Porta:Porta1|e_fechar ; LCCOMB_X64_Y12_N6  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador2|Porta:Porta1|e_ss     ; LCCOMB_X64_Y12_N20 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; Integrador:Integrador2|estado.aberto         ; LCFF_X64_Y12_N15   ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador3|Porta:Porta1|e_clr~0  ; LCCOMB_X63_Y11_N18 ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador3|Porta:Porta1|e_fechar ; LCCOMB_X61_Y11_N18 ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador3|Porta:Porta1|e_ss     ; LCCOMB_X61_Y11_N12 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; Integrador:Integrador3|estado.aberto         ; LCFF_X62_Y11_N17   ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador4|Porta:Porta1|e_clr~0  ; LCCOMB_X64_Y11_N14 ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador4|Porta:Porta1|e_fechar ; LCCOMB_X64_Y11_N24 ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; Integrador:Integrador4|Porta:Porta1|e_ss     ; LCCOMB_X64_Y11_N28 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; Integrador:Integrador4|estado.aberto         ; LCFF_X64_Y11_N23   ; 5       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clock                                        ; PIN_D13            ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
+; ok                                           ; PIN_W26            ; 13      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; ok~clk_delay_ctrl                            ; CLKDELAYCTRL_G7    ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; reg_clear~0                                  ; LCCOMB_X64_Y12_N0  ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; reset                                        ; PIN_N23            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; reset~clk_delay_ctrl                         ; CLKDELAYCTRL_G4    ; 8       ; Async. clear ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 +----------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1297,13 +1287,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                     ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; Integrador:Integrador1|Porta:Porta1|e_ss ; LCCOMB_X2_Y13_N0   ; 4       ; Global Clock         ; GCLK12           ; --                        ;
-; Integrador:Integrador2|Porta:Porta1|e_ss ; LCCOMB_X1_Y13_N22  ; 4       ; Global Clock         ; GCLK2            ; --                        ;
-; Integrador:Integrador3|Porta:Porta1|e_ss ; LCCOMB_X1_Y14_N24  ; 4       ; Global Clock         ; GCLK0            ; --                        ;
-; Integrador:Integrador4|Porta:Porta1|e_ss ; LCCOMB_X1_Y14_N8   ; 4       ; Global Clock         ; GCLK1            ; --                        ;
-; clock                                    ; PIN_P2             ; 12      ; Global Clock         ; GCLK3            ; --                        ;
-; reg_clear~0                              ; LCCOMB_X30_Y12_N24 ; 8       ; Global Clock         ; GCLK15           ; --                        ;
-; reset                                    ; PIN_C13            ; 8       ; Global Clock         ; GCLK11           ; --                        ;
+; Integrador:Integrador1|Porta:Porta1|e_ss ; LCCOMB_X63_Y10_N14 ; 4       ; Global Clock         ; GCLK12           ; --                        ;
+; Integrador:Integrador2|Porta:Porta1|e_ss ; LCCOMB_X64_Y12_N20 ; 4       ; Global Clock         ; GCLK5            ; --                        ;
+; Integrador:Integrador3|Porta:Porta1|e_ss ; LCCOMB_X61_Y11_N12 ; 4       ; Global Clock         ; GCLK13           ; --                        ;
+; Integrador:Integrador4|Porta:Porta1|e_ss ; LCCOMB_X64_Y11_N28 ; 4       ; Global Clock         ; GCLK6            ; --                        ;
+; clock                                    ; PIN_D13            ; 8       ; Global Clock         ; GCLK11           ; --                        ;
+; ok~clk_delay_ctrl                        ; CLKDELAYCTRL_G7    ; 4       ; Global Clock         ; GCLK7            ; --                        ;
+; reg_clear~0                              ; LCCOMB_X64_Y12_N0  ; 8       ; Global Clock         ; GCLK14           ; --                        ;
+; reset~clk_delay_ctrl                     ; CLKDELAYCTRL_G4    ; 8       ; Global Clock         ; GCLK4            ; --                        ;
 +------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1312,37 +1303,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------+---------+
 ; Name                                                                 ; Fan-Out ;
 +----------------------------------------------------------------------+---------+
-; cancel                                                               ; 15      ;
+; cancel                                                               ; 14      ;
+; ok                                                                   ; 13      ;
 ; Reg4Bits:regSenha1|FF_D:FF_B3|QS                                     ; 10      ;
 ; Reg4Bits:regSenha1|FF_D:FF_B2|QS                                     ; 10      ;
 ; Reg4Bits:regSenha1|FF_D:FF_B1|QS                                     ; 10      ;
 ; Reg4Bits:regSenha1|FF_D:FF_B0|QS                                     ; 10      ;
-; ok                                                                   ; 8       ;
 ; fechar                                                               ; 8       ;
+; Reg4Bits:regButtons1|FF_D:FF_B3|QS                                   ; 7       ;
+; Reg4Bits:regButtons1|FF_D:FF_B2|QS                                   ; 7       ;
+; Reg4Bits:regButtons1|FF_D:FF_B1|QS                                   ; 7       ;
+; Reg4Bits:regButtons1|FF_D:FF_B0|QS                                   ; 7       ;
 ; in_b[1]                                                              ; 6       ;
 ; in_b[0]                                                              ; 6       ;
-; Reg4Bits:regButtons1|FF_D:FF_B3|QS                                   ; 6       ;
-; Reg4Bits:regButtons1|FF_D:FF_B2|QS                                   ; 6       ;
-; Reg4Bits:regButtons1|FF_D:FF_B1|QS                                   ; 6       ;
-; Reg4Bits:regButtons1|FF_D:FF_B0|QS                                   ; 6       ;
-; Integrador:Integrador2|estado.aberto_s                               ; 5       ;
 ; Integrador:Integrador1|estado.aberto_s                               ; 5       ;
 ; Integrador:Integrador4|Porta:Porta1|e_clr~0                          ; 5       ;
-; Integrador:Integrador3|Porta:Porta1|e_clr~0                          ; 5       ;
-; Integrador:Integrador2|Porta:Porta1|e_clr~0                          ; 5       ;
-; Integrador:Integrador1|Porta:Porta1|e_clr~0                          ; 5       ;
 ; Integrador:Integrador4|estado.aberto                                 ; 5       ;
+; Integrador:Integrador3|Porta:Porta1|e_clr~0                          ; 5       ;
 ; Integrador:Integrador3|estado.aberto                                 ; 5       ;
-; Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1|Sp          ; 5       ;
+; Integrador:Integrador2|Porta:Porta1|e_clr~0                          ; 5       ;
+; Integrador:Integrador2|estado.aberto                                 ; 5       ;
+; Integrador:Integrador1|Porta:Porta1|e_clr~0                          ; 5       ;
 ; Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1|Sp          ; 5       ;
-; clock                                                                ; 4       ;
 ; Integrador:Integrador4|estado.aberto_s                               ; 4       ;
 ; Integrador:Integrador3|estado.aberto_s                               ; 4       ;
-; Integrador:Integrador2|estado.aberto                                 ; 4       ;
+; Integrador:Integrador2|estado.aberto_s                               ; 4       ;
 ; Integrador:Integrador1|estado.aberto                                 ; 4       ;
 ; invalid_s~0                                                          ; 4       ;
 ; Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1|Sp          ; 4       ;
 ; Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1|Sp          ; 4       ;
+; Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1|Sp          ; 4       ;
+; reset                                                                ; 2       ;
 ; DecButtons:decButtons1|dec_b[1]~1                                    ; 2       ;
 ; DecDisplay:decDisplay1|Mux2~0                                        ; 2       ;
 ; DecButtons:decButtons1|dec_b[1]~0                                    ; 2       ;
@@ -1362,9 +1353,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; in_sn[3]                                                             ; 1       ;
 ; in_sn[2]                                                             ; 1       ;
 ; in_sn[1]                                                             ; 1       ;
-; reset                                                                ; 1       ;
 ; in_sn[0]                                                             ; 1       ;
 ; Reg4Bits:regButtons1|FF_D:FF_B0|QS~0                                 ; 1       ;
+; Integrador:Integrador2|Selector0~2                                   ; 1       ;
+; Integrador:Integrador2|Selector0~1                                   ; 1       ;
 ; Integrador:Integrador3|Selector0~2                                   ; 1       ;
 ; Integrador:Integrador3|Selector0~1                                   ; 1       ;
 ; Integrador:Integrador4|Selector0~2                                   ; 1       ;
@@ -1381,46 +1373,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Integrador:Integrador1|Selector1~2                                   ; 1       ;
 ; Integrador:Integrador1|Selector1~1                                   ; 1       ;
 ; Integrador:Integrador1|Selector1~0                                   ; 1       ;
-; Integrador:Integrador4|Selector0~0                                   ; 1       ;
 ; Integrador:Integrador4|Porta:Porta1|e_fechar                         ; 1       ;
-; Integrador:Integrador3|Selector0~0                                   ; 1       ;
 ; Integrador:Integrador3|Porta:Porta1|e_fechar                         ; 1       ;
-; Integrador:Integrador2|Selector0~3                                   ; 1       ;
-; Integrador:Integrador2|Selector0~2                                   ; 1       ;
-; Integrador:Integrador2|Selector0~1                                   ; 1       ;
-; Integrador:Integrador2|Selector0~0                                   ; 1       ;
 ; Integrador:Integrador2|Porta:Porta1|e_fechar                         ; 1       ;
+; Integrador:Integrador1|Porta:Porta1|e_fechar                         ; 1       ;
+; Integrador:Integrador4|Selector0~0                                   ; 1       ;
+; Integrador:Integrador3|Selector0~0                                   ; 1       ;
+; Integrador:Integrador2|Selector0~0                                   ; 1       ;
 ; Integrador:Integrador1|Selector0~3                                   ; 1       ;
 ; Integrador:Integrador1|Selector0~2                                   ; 1       ;
 ; Integrador:Integrador1|Selector0~1                                   ; 1       ;
 ; Integrador:Integrador1|Selector0~0                                   ; 1       ;
-; Integrador:Integrador1|Porta:Porta1|e_fechar                         ; 1       ;
 ; DecButtons:decButtons1|dec_b[1]~2                                    ; 1       ;
 ; DecDisplay:decDisplay1|Mux3~0                                        ; 1       ;
 ; out_b~3                                                              ; 1       ;
 ; out_b~2                                                              ; 1       ;
 ; out_b~1                                                              ; 1       ;
 ; out_b~0                                                              ; 1       ;
+; out_sc~0                                                             ; 1       ;
 ; Integrador:Integrador4|Porta:Porta1|Sc                               ; 1       ;
-; Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2|QS ; 1       ;
-; Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
+; Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0|QS ; 1       ;
+; Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
 ; Integrador:Integrador3|Porta:Porta1|Sc                               ; 1       ;
-; Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2|QS ; 1       ;
-; Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
+; Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0|QS ; 1       ;
+; Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
 ; Integrador:Integrador2|Porta:Porta1|Sc                               ; 1       ;
-; Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2|QS ; 1       ;
-; Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
+; Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0|QS ; 1       ;
+; Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
 ; Integrador:Integrador1|Porta:Porta1|Sc                               ; 1       ;
-; Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2|QS ; 1       ;
-; Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
+; Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3|QS ; 1       ;
 ; Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0|QS ; 1       ;
+; Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1|QS ; 1       ;
 +----------------------------------------------------------------------+---------+
 
 
@@ -1429,107 +1419,105 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 132 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 6 / 3,315 ( < 1 % )    ;
-; C4 interconnects            ; 65 / 60,840 ( < 1 % )  ;
-; Direct links                ; 36 / 94,460 ( < 1 % )  ;
-; Global clocks               ; 7 / 16 ( 44 % )        ;
-; Local interconnects         ; 45 / 33,216 ( < 1 % )  ;
-; R24 interconnects           ; 4 / 3,091 ( < 1 % )    ;
-; R4 interconnects            ; 77 / 81,294 ( < 1 % )  ;
+; Block interconnects         ; 130 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 7 / 3,315 ( < 1 % )    ;
+; C4 interconnects            ; 111 / 60,840 ( < 1 % ) ;
+; Direct links                ; 32 / 94,460 ( < 1 % )  ;
+; Global clocks               ; 8 / 16 ( 50 % )        ;
+; Local interconnects         ; 55 / 33,216 ( < 1 % )  ;
+; R24 interconnects           ; 30 / 3,091 ( < 1 % )   ;
+; R4 interconnects            ; 88 / 81,294 ( < 1 % )  ;
 +-----------------------------+------------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 9.63) ; Number of LABs  (Total = 8) ;
+; Number of Logic Elements  (Average = 8.89) ; Number of LABs  (Total = 9) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
+; 1                                          ; 0                           ;
 ; 2                                          ; 0                           ;
-; 3                                          ; 1                           ;
+; 3                                          ; 2                           ;
 ; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 1                           ;
-; 7                                          ; 0                           ;
+; 5                                          ; 1                           ;
+; 6                                          ; 0                           ;
+; 7                                          ; 1                           ;
 ; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
+; 9                                          ; 1                           ;
 ; 10                                         ; 0                           ;
-; 11                                         ; 2                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 1                           ;
+; 11                                         ; 0                           ;
+; 12                                         ; 1                           ;
+; 13                                         ; 2                           ;
 ; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 2                           ;
+; 15                                         ; 1                           ;
+; 16                                         ; 0                           ;
 +--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.63) ; Number of LABs  (Total = 8) ;
+; LAB-wide Signals  (Average = 1.78) ; Number of LABs  (Total = 9) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 3                           ;
-; 1 Clock                            ; 3                           ;
-; 2 Async. clears                    ; 3                           ;
-; 2 Clocks                           ; 4                           ;
+; 1 Clock                            ; 2                           ;
+; 2 Async. clears                    ; 5                           ;
+; 2 Clocks                           ; 6                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 14.13) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced  (Average = 12.56) ; Number of LABs  (Total = 9) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 1                           ;
+; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
-; 3                                            ; 0                           ;
+; 3                                            ; 1                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 1                           ;
-; 7                                            ; 0                           ;
+; 5                                            ; 1                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 1                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
-; 10                                           ; 0                           ;
+; 10                                           ; 1                           ;
 ; 11                                           ; 0                           ;
-; 12                                           ; 1                           ;
+; 12                                           ; 0                           ;
 ; 13                                           ; 1                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
 ; 16                                           ; 0                           ;
-; 17                                           ; 0                           ;
+; 17                                           ; 1                           ;
 ; 18                                           ; 1                           ;
-; 19                                           ; 0                           ;
+; 19                                           ; 1                           ;
 ; 20                                           ; 0                           ;
-; 21                                           ; 3                           ;
+; 21                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 6.50) ; Number of LABs  (Total = 8) ;
+; Number of Signals Sourced Out  (Average = 4.67) ; Number of LABs  (Total = 9) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
+; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 1                           ;
+; 3                                               ; 3                           ;
+; 4                                               ; 3                           ;
 ; 5                                               ; 1                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 1                           ;
 ; 8                                               ; 0                           ;
-; 9                                               ; 0                           ;
-; 10                                              ; 1                           ;
-; 11                                              ; 2                           ;
+; 9                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 9.88) ; Number of LABs  (Total = 8) ;
+; Number of Distinct Inputs  (Average = 9.78) ; Number of LABs  (Total = 9) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -1537,17 +1525,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
-; 7                                           ; 0                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 2                           ;
 ; 8                                           ; 1                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
+; 10                                          ; 0                           ;
 ; 11                                          ; 1                           ;
 ; 12                                          ; 1                           ;
-; 13                                          ; 0                           ;
-; 14                                          ; 1                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 1                           ;
+; 13                                          ; 2                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1580,39 +1567,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+-------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary               ;
-+------------------+----------------------+-------------------+
-; Source Clock(s)  ; Destination Clock(s) ; Delay Added in ns ;
-+------------------+----------------------+-------------------+
-; clock            ; fechar               ; 3.7               ;
-; I/O              ; clock                ; 1.3               ;
-; clock,fechar,I/O ; clock                ; 1.3               ;
-+------------------+----------------------+-------------------+
++------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary              ;
++-----------------+----------------------+-------------------+
+; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
++-----------------+----------------------+-------------------+
+; I/O             ; clock                ; 7.5               ;
++-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                 ;
-+-------------------------------------------------------------+-------------------------------------------------------------+-------------------+
-; Source Register                                             ; Destination Register                                        ; Delay Added in ns ;
-+-------------------------------------------------------------+-------------------------------------------------------------+-------------------+
-; Reg4Bits:regButtons1|FF_D:FF_B1|QS                          ; Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 1.978             ;
-; Reg4Bits:regButtons1|FF_D:FF_B0|QS                          ; Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 1.789             ;
-; fechar                                                      ; Integrador:Integrador3|estado.aberto_s                      ; 0.744             ;
-; Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador4|estado.aberto_s                      ; 0.372             ;
-; Integrador:Integrador4|estado.aberto_s                      ; Integrador:Integrador4|estado.aberto_s                      ; 0.372             ;
-; cancel                                                      ; Integrador:Integrador4|estado.aberto_s                      ; 0.372             ;
-; Reg4Bits:regButtons1|FF_D:FF_B3|QS                          ; Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 0.368             ;
-; Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador3|estado.aberto_s                      ; 0.342             ;
-; Integrador:Integrador3|estado.aberto_s                      ; Integrador:Integrador3|estado.aberto_s                      ; 0.342             ;
-; Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador2|estado.aberto_s                      ; 0.300             ;
-; Integrador:Integrador2|estado.aberto_s                      ; Integrador:Integrador2|estado.aberto_s                      ; 0.300             ;
-; Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador1|estado.aberto_s                      ; 0.258             ;
-; Integrador:Integrador1|estado.aberto_s                      ; Integrador:Integrador1|estado.aberto_s                      ; 0.258             ;
-+-------------------------------------------------------------+-------------------------------------------------------------+-------------------+
-Note: This table only shows the top 13 path(s) that have the largest delay added for hold.
++--------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                            ;
++-------------------------------------------------------------+----------------------------------------+-------------------+
+; Source Register                                             ; Destination Register                   ; Delay Added in ns ;
++-------------------------------------------------------------+----------------------------------------+-------------------+
+; ok                                                          ; Integrador:Integrador4|estado.aberto   ; 1.139             ;
+; fechar                                                      ; Integrador:Integrador2|estado.aberto_s ; 0.547             ;
+; Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador4|estado.aberto_s ; 0.310             ;
+; Integrador:Integrador4|estado.aberto                        ; Integrador:Integrador4|estado.aberto_s ; 0.310             ;
+; Reg4Bits:regButtons1|FF_D:FF_B3|QS                          ; Integrador:Integrador4|estado.aberto_s ; 0.310             ;
+; cancel                                                      ; Integrador:Integrador4|estado.aberto_s ; 0.310             ;
+; Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador2|estado.aberto_s ; 0.298             ;
+; Integrador:Integrador2|estado.aberto                        ; Integrador:Integrador2|estado.aberto_s ; 0.298             ;
+; Reg4Bits:regButtons1|FF_D:FF_B1|QS                          ; Integrador:Integrador2|estado.aberto_s ; 0.298             ;
+; Integrador:Integrador2|estado.aberto_s                      ; Integrador:Integrador2|estado.aberto_s ; 0.274             ;
+; Integrador:Integrador4|estado.aberto_s                      ; Integrador:Integrador4|estado.aberto_s ; 0.205             ;
+; Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador1|estado.aberto   ; 0.144             ;
+; Integrador:Integrador1|estado.aberto                        ; Integrador:Integrador1|estado.aberto_s ; 0.112             ;
+; Reg4Bits:regButtons1|FF_D:FF_B0|QS                          ; Integrador:Integrador1|estado.aberto_s ; 0.112             ;
+; Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1|Sp ; Integrador:Integrador3|estado.aberto_s ; 0.106             ;
+; Integrador:Integrador3|estado.aberto_s                      ; Integrador:Integrador3|estado.aberto_s ; 0.106             ;
+; Integrador:Integrador1|estado.aberto_s                      ; Integrador:Integrador1|estado.aberto_s ; 0.089             ;
++-------------------------------------------------------------+----------------------------------------+-------------------+
+Note: This table only shows the top 17 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1631,49 +1620,25 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location E3
     Info (169125): Pin ~nCSO~ is reserved at location D3
     Info (169125): Pin ~LVDS150p/nCEO~ is reserved at location AE24
-Critical Warning (169085): No exact pin location assignment(s) for 32 pins of 34 total pins
-    Info (169086): Pin out_sp[0] not assigned to an exact location on the device
-    Info (169086): Pin out_sp[1] not assigned to an exact location on the device
-    Info (169086): Pin out_sp[2] not assigned to an exact location on the device
-    Info (169086): Pin out_sp[3] not assigned to an exact location on the device
-    Info (169086): Pin out_sc[0] not assigned to an exact location on the device
-    Info (169086): Pin out_sc[1] not assigned to an exact location on the device
-    Info (169086): Pin out_sc[2] not assigned to an exact location on the device
-    Info (169086): Pin out_sc[3] not assigned to an exact location on the device
-    Info (169086): Pin out_b[0] not assigned to an exact location on the device
-    Info (169086): Pin out_b[1] not assigned to an exact location on the device
-    Info (169086): Pin out_b[2] not assigned to an exact location on the device
-    Info (169086): Pin out_b[3] not assigned to an exact location on the device
-    Info (169086): Pin out_sn[0] not assigned to an exact location on the device
-    Info (169086): Pin out_sn[1] not assigned to an exact location on the device
-    Info (169086): Pin out_sn[2] not assigned to an exact location on the device
-    Info (169086): Pin out_sn[3] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[6] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[5] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[4] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[3] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[2] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[1] not assigned to an exact location on the device
-    Info (169086): Pin dec_display[0] not assigned to an exact location on the device
-    Info (169086): Pin in_b[0] not assigned to an exact location on the device
-    Info (169086): Pin in_b[1] not assigned to an exact location on the device
-    Info (169086): Pin in_sn[0] not assigned to an exact location on the device
-    Info (169086): Pin clock not assigned to an exact location on the device
-    Info (169086): Pin reset not assigned to an exact location on the device
-    Info (169086): Pin in_sn[1] not assigned to an exact location on the device
-    Info (169086): Pin in_sn[2] not assigned to an exact location on the device
-    Info (169086): Pin in_sn[3] not assigned to an exact location on the device
-    Info (169086): Pin ok not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Armario.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node clock (placed in PIN P2 (CLK2, LVDSCLK1p, Input))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+Info (176353): Automatically promoted node clock (placed in PIN D13 (CLK11, LVDSCLK5p, Input))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G11
+Info (176353): Automatically promoted node ok (placed in PIN W26 (LVDS139p, CDPCLK4/DQS3R/CQ3R#))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G7
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Reg4Bits:regButtons1|FF_D:FF_B0|QS
         Info (176357): Destination node Reg4Bits:regButtons1|FF_D:FF_B1|QS
         Info (176357): Destination node Reg4Bits:regButtons1|FF_D:FF_B2|QS
         Info (176357): Destination node Reg4Bits:regButtons1|FF_D:FF_B3|QS
+        Info (176357): Destination node Integrador:Integrador1|Selector0~2
+        Info (176357): Destination node Integrador:Integrador1|Selector1~0
+        Info (176357): Destination node Integrador:Integrador2|Selector1~0
+        Info (176357): Destination node Integrador:Integrador3|Selector1~0
+        Info (176357): Destination node Integrador:Integrador4|Selector1~0
+        Info (176357): Destination node Integrador:Integrador4|Selector0~2
+        Info (176358): Non-global destination nodes limited to 10 nodes
 Info (176353): Automatically promoted node Integrador:Integrador1|Porta:Porta1|e_ss 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Integrador:Integrador2|Porta:Porta1|e_ss 
@@ -1682,8 +1647,8 @@ Info (176353): Automatically promoted node Integrador:Integrador3|Porta:Porta1|e
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node Integrador:Integrador4|Porta:Porta1|e_ss 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node reset (placed in PIN C13 (CLK10, LVDSCLK5n, Input))
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G11
+Info (176353): Automatically promoted node reset (placed in PIN N23 (LVDS126p, DPCLK7/DQS0R/CQ1R))
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node reg_clear~0
 Info (176353): Automatically promoted node reg_clear~0 
@@ -1691,30 +1656,6 @@ Info (176353): Automatically promoted node reg_clear~0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 30 (unused VREF, 3.3V VCCIO, 7 input, 23 output, 0 bidirectional)
-        Info (176212): I/O standards used: 3.3-V LVTTL.
-Info (176215): I/O bank details before I/O pin placement
-    Info (176214): Statistics of I/O banks
-        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 3 total pin(s) used --  61 pins available
-        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  57 pins available
-        Info (176213): I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  55 pins available
-        Info (176213): I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
-        Info (176213): I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  65 pins available
-        Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
-        Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
-        Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-Warning (15705): Ignored locations or region assignments to the following nodes
-    Warning (15706): Node "Sc" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "Sp" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "clr" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "enF" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "enM" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "s[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "s[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "s[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "s[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "ss" is assigned to location or region, but does not exist in design
 Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1723,21 +1664,18 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X0_Y12 to location X10_Y23
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X55_Y0 to location X65_Y11
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.78 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 23 output pins without output pin load capacitance assignment
+Warning (306006): Found 20 output pins without output pin load capacitance assignment
+    Info (306007): Pin "out_sc" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_sp[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_sp[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_sp[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_sp[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "out_sc[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "out_sc[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "out_sc[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
-    Info (306007): Pin "out_sc[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_b[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_b[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "out_b[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1757,12 +1695,11 @@ Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/uema/Documents/GitHub/cd_armario/Implementação/output_files/Armario.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 800 megabytes
-    Info: Processing ended: Fri Nov 24 23:40:24 2017
-    Info: Elapsed time: 00:00:08
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 802 megabytes
+    Info: Processing ended: Sat Nov 25 00:33:33 2017
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:08
 
 
