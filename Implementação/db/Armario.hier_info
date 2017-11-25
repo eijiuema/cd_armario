@@ -1,4 +1,215 @@
-|Porta
+|Entrada
+in_b[0] => DecButtons:decButtons1.in_b[0]
+in_b[0] => DecDisplay:decDisplay1.valor[0]
+in_b[1] => DecButtons:decButtons1.in_b[1]
+in_b[1] => DecDisplay:decDisplay1.valor[1]
+in_sn[0] => Reg4Bits:regSenha1.d[0]
+in_sn[1] => Reg4Bits:regSenha1.d[1]
+in_sn[2] => Reg4Bits:regSenha1.d[2]
+in_sn[3] => Reg4Bits:regSenha1.d[3]
+clock => Integrador:Integrador1.clock
+clock => Integrador:Integrador2.clock
+clock => Integrador:Integrador3.clock
+clock => Integrador:Integrador4.clock
+ok => Reg4Bits:regButtons1.clock
+ok => Reg4Bits:regSenha1.clock
+ok => Integrador:Integrador1.set
+ok => Integrador:Integrador2.set
+ok => Integrador:Integrador3.set
+ok => Integrador:Integrador4.set
+cancel => reg_clear.IN0
+cancel => Integrador:Integrador1.clr
+cancel => Integrador:Integrador2.clr
+cancel => Integrador:Integrador3.clr
+cancel => Integrador:Integrador4.clr
+reset => reg_clear.IN1
+reset => Integrador:Integrador1.reset
+reset => Integrador:Integrador2.reset
+reset => Integrador:Integrador3.reset
+reset => Integrador:Integrador4.reset
+fechar => Integrador:Integrador1.fechar
+fechar => Integrador:Integrador2.fechar
+fechar => Integrador:Integrador3.fechar
+fechar => Integrador:Integrador4.fechar
+out_sp[0] <= Integrador:Integrador1.out_sp
+out_sp[1] <= Integrador:Integrador2.out_sp
+out_sp[2] <= Integrador:Integrador3.out_sp
+out_sp[3] <= Integrador:Integrador4.out_sp
+out_sc[0] <= Integrador:Integrador1.out_sc
+out_sc[1] <= Integrador:Integrador2.out_sc
+out_sc[2] <= Integrador:Integrador3.out_sc
+out_sc[3] <= Integrador:Integrador4.out_sc
+out_b[0] <= out_b.DB_MAX_OUTPUT_PORT_TYPE
+out_b[1] <= out_b.DB_MAX_OUTPUT_PORT_TYPE
+out_b[2] <= out_b.DB_MAX_OUTPUT_PORT_TYPE
+out_b[3] <= out_b.DB_MAX_OUTPUT_PORT_TYPE
+out_sn[0] <= Reg4Bits:regSenha1.q[0]
+out_sn[1] <= Reg4Bits:regSenha1.q[1]
+out_sn[2] <= Reg4Bits:regSenha1.q[2]
+out_sn[3] <= Reg4Bits:regSenha1.q[3]
+dec_display[6] <= DecDisplay:decDisplay1.dig0[6]
+dec_display[5] <= DecDisplay:decDisplay1.dig0[5]
+dec_display[4] <= DecDisplay:decDisplay1.dig0[4]
+dec_display[3] <= DecDisplay:decDisplay1.dig0[3]
+dec_display[2] <= DecDisplay:decDisplay1.dig0[2]
+dec_display[1] <= DecDisplay:decDisplay1.dig0[1]
+dec_display[0] <= DecDisplay:decDisplay1.dig0[0]
+
+
+|Entrada|DecButtons:decButtons1
+in_b[0] => dec_b.IN0
+in_b[0] => dec_b.IN0
+in_b[0] => dec_b.IN0
+in_b[0] => dec_b.IN0
+in_b[1] => dec_b.IN1
+in_b[1] => dec_b.IN1
+in_b[1] => dec_b.IN1
+in_b[1] => dec_b.IN1
+dec_b[0] <= dec_b.DB_MAX_OUTPUT_PORT_TYPE
+dec_b[1] <= dec_b.DB_MAX_OUTPUT_PORT_TYPE
+dec_b[2] <= dec_b.DB_MAX_OUTPUT_PORT_TYPE
+dec_b[3] <= dec_b.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|DecDisplay:decDisplay1
+valor[0] => Mux0.IN5
+valor[0] => Mux1.IN5
+valor[0] => Mux2.IN5
+valor[0] => Mux3.IN5
+valor[0] => Mux4.IN5
+valor[0] => Mux5.IN5
+valor[1] => Mux0.IN4
+valor[1] => Mux1.IN4
+valor[1] => Mux2.IN4
+valor[1] => Mux3.IN4
+valor[1] => Mux4.IN4
+valor[1] => Mux5.IN4
+dig0[6] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+dig0[5] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+dig0[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+dig0[3] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dig0[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dig0[1] <= <GND>
+dig0[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regButtons1
+d[0] => FF_D:FF_B0.d
+d[1] => FF_D:FF_B1.d
+d[2] => FF_D:FF_B2.d
+d[3] => FF_D:FF_B3.d
+clock => FF_D:FF_B0.clock
+clock => FF_D:FF_B1.clock
+clock => FF_D:FF_B2.clock
+clock => FF_D:FF_B3.clock
+clear => FF_D:FF_B0.clear
+clear => FF_D:FF_B1.clear
+clear => FF_D:FF_B2.clear
+clear => FF_D:FF_B3.clear
+q[0] <= FF_D:FF_B0.q
+q[1] <= FF_D:FF_B1.q
+q[2] <= FF_D:FF_B2.q
+q[3] <= FF_D:FF_B3.q
+
+
+|Entrada|Reg4Bits:regButtons1|FF_D:FF_B0
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regButtons1|FF_D:FF_B1
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regButtons1|FF_D:FF_B2
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regButtons1|FF_D:FF_B3
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regSenha1
+d[0] => FF_D:FF_B0.d
+d[1] => FF_D:FF_B1.d
+d[2] => FF_D:FF_B2.d
+d[3] => FF_D:FF_B3.d
+clock => FF_D:FF_B0.clock
+clock => FF_D:FF_B1.clock
+clock => FF_D:FF_B2.clock
+clock => FF_D:FF_B3.clock
+clear => FF_D:FF_B0.clear
+clear => FF_D:FF_B1.clear
+clear => FF_D:FF_B2.clear
+clear => FF_D:FF_B3.clear
+q[0] <= FF_D:FF_B0.q
+q[1] <= FF_D:FF_B1.q
+q[2] <= FF_D:FF_B2.q
+q[3] <= FF_D:FF_B3.q
+
+
+|Entrada|Reg4Bits:regSenha1|FF_D:FF_B0
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regSenha1|FF_D:FF_B1
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regSenha1|FF_D:FF_B2
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Reg4Bits:regSenha1|FF_D:FF_B3
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador1
+clock => estado~1.DATAIN
+reset => estado~3.DATAIN
+fechar => process_0.IN1
+fechar => Porta:Porta1.fechar
+set => process_0.IN0
+clr => process_0.IN0
+clr => process_0.IN1
+clr => process_0.IN0
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => Porta:Porta1.enM
+s[0] => Porta:Porta1.s[0]
+s[1] => Porta:Porta1.s[1]
+s[2] => Porta:Porta1.s[2]
+s[3] => Porta:Porta1.s[3]
+out_sp <= Porta:Porta1.Sp
+out_sc <= Porta:Porta1.Sc
+
+
+|Entrada|Integrador:Integrador1|Porta:Porta1
 s[0] => Sc.IN1
 s[0] => Reg4Bits:regSenha1.d[0]
 s[1] => Sc.IN1
@@ -18,7 +229,7 @@ Sp <= AbreFecha:abreFecha1.Sp
 Sc <= Sc.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Porta|Reg4Bits:regSenha1
+|Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1
 d[0] => FF_D:FF_B0.d
 d[1] => FF_D:FF_B1.d
 d[2] => FF_D:FF_B2.d
@@ -37,35 +248,320 @@ q[2] <= FF_D:FF_B2.q
 q[3] <= FF_D:FF_B3.q
 
 
-|Porta|Reg4Bits:regSenha1|FF_D:FF_B0
+|Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0
 d => QS.DATAIN
 clock => QS.CLK
 clear => QS.ACLR
 q <= QS.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Porta|Reg4Bits:regSenha1|FF_D:FF_B1
+|Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1
 d => QS.DATAIN
 clock => QS.CLK
 clear => QS.ACLR
 q <= QS.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Porta|Reg4Bits:regSenha1|FF_D:FF_B2
+|Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2
 d => QS.DATAIN
 clock => QS.CLK
 clear => QS.ACLR
 q <= QS.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Porta|Reg4Bits:regSenha1|FF_D:FF_B3
+|Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3
 d => QS.DATAIN
 clock => QS.CLK
 clear => QS.ACLR
 q <= QS.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Porta|AbreFecha:abreFecha1
+|Entrada|Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1
+enF => Sp~reg0.PRESET
+fechar => Sp~reg0.CLK
+Sp <= Sp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador2
+clock => estado~1.DATAIN
+reset => estado~3.DATAIN
+fechar => process_0.IN1
+fechar => Porta:Porta1.fechar
+set => process_0.IN0
+clr => process_0.IN0
+clr => process_0.IN1
+clr => process_0.IN0
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => Porta:Porta1.enM
+s[0] => Porta:Porta1.s[0]
+s[1] => Porta:Porta1.s[1]
+s[2] => Porta:Porta1.s[2]
+s[3] => Porta:Porta1.s[3]
+out_sp <= Porta:Porta1.Sp
+out_sc <= Porta:Porta1.Sc
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1
+s[0] => Sc.IN1
+s[0] => Reg4Bits:regSenha1.d[0]
+s[1] => Sc.IN1
+s[1] => Reg4Bits:regSenha1.d[1]
+s[2] => Sc.IN1
+s[2] => Reg4Bits:regSenha1.d[2]
+s[3] => Sc.IN1
+s[3] => Reg4Bits:regSenha1.d[3]
+ss => e_ss.IN0
+clr => e_clr.IN0
+enM => e_ss.IN1
+enM => e_clr.IN1
+enM => e_fechar.IN0
+enF => AbreFecha:abreFecha1.enF
+fechar => e_fechar.IN1
+Sp <= AbreFecha:abreFecha1.Sp
+Sc <= Sc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1
+d[0] => FF_D:FF_B0.d
+d[1] => FF_D:FF_B1.d
+d[2] => FF_D:FF_B2.d
+d[3] => FF_D:FF_B3.d
+clock => FF_D:FF_B0.clock
+clock => FF_D:FF_B1.clock
+clock => FF_D:FF_B2.clock
+clock => FF_D:FF_B3.clock
+clear => FF_D:FF_B0.clear
+clear => FF_D:FF_B1.clear
+clear => FF_D:FF_B2.clear
+clear => FF_D:FF_B3.clear
+q[0] <= FF_D:FF_B0.q
+q[1] <= FF_D:FF_B1.q
+q[2] <= FF_D:FF_B2.q
+q[3] <= FF_D:FF_B3.q
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1
+enF => Sp~reg0.PRESET
+fechar => Sp~reg0.CLK
+Sp <= Sp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador3
+clock => estado~1.DATAIN
+reset => estado~3.DATAIN
+fechar => process_0.IN1
+fechar => Porta:Porta1.fechar
+set => process_0.IN0
+clr => process_0.IN0
+clr => process_0.IN1
+clr => process_0.IN0
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => Porta:Porta1.enM
+s[0] => Porta:Porta1.s[0]
+s[1] => Porta:Porta1.s[1]
+s[2] => Porta:Porta1.s[2]
+s[3] => Porta:Porta1.s[3]
+out_sp <= Porta:Porta1.Sp
+out_sc <= Porta:Porta1.Sc
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1
+s[0] => Sc.IN1
+s[0] => Reg4Bits:regSenha1.d[0]
+s[1] => Sc.IN1
+s[1] => Reg4Bits:regSenha1.d[1]
+s[2] => Sc.IN1
+s[2] => Reg4Bits:regSenha1.d[2]
+s[3] => Sc.IN1
+s[3] => Reg4Bits:regSenha1.d[3]
+ss => e_ss.IN0
+clr => e_clr.IN0
+enM => e_ss.IN1
+enM => e_clr.IN1
+enM => e_fechar.IN0
+enF => AbreFecha:abreFecha1.enF
+fechar => e_fechar.IN1
+Sp <= AbreFecha:abreFecha1.Sp
+Sc <= Sc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1
+d[0] => FF_D:FF_B0.d
+d[1] => FF_D:FF_B1.d
+d[2] => FF_D:FF_B2.d
+d[3] => FF_D:FF_B3.d
+clock => FF_D:FF_B0.clock
+clock => FF_D:FF_B1.clock
+clock => FF_D:FF_B2.clock
+clock => FF_D:FF_B3.clock
+clear => FF_D:FF_B0.clear
+clear => FF_D:FF_B1.clear
+clear => FF_D:FF_B2.clear
+clear => FF_D:FF_B3.clear
+q[0] <= FF_D:FF_B0.q
+q[1] <= FF_D:FF_B1.q
+q[2] <= FF_D:FF_B2.q
+q[3] <= FF_D:FF_B3.q
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1
+enF => Sp~reg0.PRESET
+fechar => Sp~reg0.CLK
+Sp <= Sp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador4
+clock => estado~1.DATAIN
+reset => estado~3.DATAIN
+fechar => process_0.IN1
+fechar => Porta:Porta1.fechar
+set => process_0.IN0
+clr => process_0.IN0
+clr => process_0.IN1
+clr => process_0.IN0
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => process_0.IN1
+bi => Porta:Porta1.enM
+s[0] => Porta:Porta1.s[0]
+s[1] => Porta:Porta1.s[1]
+s[2] => Porta:Porta1.s[2]
+s[3] => Porta:Porta1.s[3]
+out_sp <= Porta:Porta1.Sp
+out_sc <= Porta:Porta1.Sc
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1
+s[0] => Sc.IN1
+s[0] => Reg4Bits:regSenha1.d[0]
+s[1] => Sc.IN1
+s[1] => Reg4Bits:regSenha1.d[1]
+s[2] => Sc.IN1
+s[2] => Reg4Bits:regSenha1.d[2]
+s[3] => Sc.IN1
+s[3] => Reg4Bits:regSenha1.d[3]
+ss => e_ss.IN0
+clr => e_clr.IN0
+enM => e_ss.IN1
+enM => e_clr.IN1
+enM => e_fechar.IN0
+enF => AbreFecha:abreFecha1.enF
+fechar => e_fechar.IN1
+Sp <= AbreFecha:abreFecha1.Sp
+Sc <= Sc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1
+d[0] => FF_D:FF_B0.d
+d[1] => FF_D:FF_B1.d
+d[2] => FF_D:FF_B2.d
+d[3] => FF_D:FF_B3.d
+clock => FF_D:FF_B0.clock
+clock => FF_D:FF_B1.clock
+clock => FF_D:FF_B2.clock
+clock => FF_D:FF_B3.clock
+clear => FF_D:FF_B0.clear
+clear => FF_D:FF_B1.clear
+clear => FF_D:FF_B2.clear
+clear => FF_D:FF_B3.clear
+q[0] <= FF_D:FF_B0.q
+q[1] <= FF_D:FF_B1.q
+q[2] <= FF_D:FF_B2.q
+q[3] <= FF_D:FF_B3.q
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3
+d => QS.DATAIN
+clock => QS.CLK
+clear => QS.ACLR
+q <= QS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entrada|Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1
 enF => Sp~reg0.PRESET
 fechar => Sp~reg0.CLK
 Sp <= Sp~reg0.DB_MAX_OUTPUT_PORT_TYPE

@@ -2,13 +2,11 @@
 
 - set
 - clr
-- bi
 - Sp
 - Sc
 
 # Saidas
 
-- EnM
 - EnF
 - clr
 - ss
@@ -21,18 +19,18 @@ C = Porta fechada
 
 # Saidas dos estados
 
-A => 0010
-B => 1101
-C => 1100
+A => 010
+B => 101
+C => 100
 
 # Transições
 
 A => A : OTHER
-A => B : 10110
-B => A : X11XX
-B => C : X010X
+A => B : 1010
+B => A : X1XX
+B => C : X00X
 B => B : OTHER
-C => A : XX101
+C => A : XX01
 C => C : OTHER
 
 

@@ -1,0 +1,24 @@
+
+State Machine - |Entrada|Integrador:Integrador4|estado
+Name estado.fechado estado.aberto_s estado.aberto 
+estado.aberto 0 0 0 
+estado.aberto_s 0 1 1 
+estado.fechado 1 0 1 
+
+State Machine - |Entrada|Integrador:Integrador3|estado
+Name estado.fechado estado.aberto_s estado.aberto 
+estado.aberto 0 0 0 
+estado.aberto_s 0 1 1 
+estado.fechado 1 0 1 
+
+State Machine - |Entrada|Integrador:Integrador2|estado
+Name estado.fechado estado.aberto_s estado.aberto 
+estado.aberto 0 0 0 
+estado.aberto_s 0 1 1 
+estado.fechado 1 0 1 
+
+State Machine - |Entrada|Integrador:Integrador1|estado
+Name estado.fechado estado.aberto_s estado.aberto 
+estado.aberto 0 0 0 
+estado.aberto_s 0 1 1 
+estado.fechado 1 0 1 

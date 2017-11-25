@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Armario
-Thu Nov 23 01:19:00 2017
+Fri Nov 24 22:31:27 2017
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -13,10 +13,15 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |Entrada|Integrador:Integrador4|estado
+  9. State Machine - |Entrada|Integrador:Integrador3|estado
+ 10. State Machine - |Entrada|Integrador:Integrador2|estado
+ 11. State Machine - |Entrada|Integrador:Integrador1|estado
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +47,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 23 01:19:00 2017      ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 24 22:31:27 2017      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; Armario                                    ;
-; Top-level Entity Name              ; Porta                                      ;
+; Top-level Entity Name              ; Entrada                                    ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 11                                         ;
-;     Total combinational functions  ; 6                                          ;
-;     Dedicated logic registers      ; 5                                          ;
-; Total registers                    ; 5                                          ;
-; Total pins                         ; 11                                         ;
+; Total logic elements               ; 84                                         ;
+;     Total combinational functions  ; 60                                         ;
+;     Dedicated logic registers      ; 36                                         ;
+; Total registers                    ; 36                                         ;
+; Total pins                         ; 34                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -65,7 +70,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; Porta              ; Armario            ;
+; Top-level entity name                                                      ; Entrada            ; Armario            ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,16 +160,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
-; Reg4Bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/uema/Desktop/Armario/Reg4Bits.vhd  ;         ;
-; AbreFecha.vhd                    ; yes             ; User VHDL File  ; C:/Users/uema/Desktop/Armario/AbreFecha.vhd ;         ;
-; FF_D.vhd                         ; yes             ; User VHDL File  ; C:/Users/uema/Desktop/Armario/FF_D.vhd      ;         ;
-; Porta.vhd                        ; yes             ; User VHDL File  ; C:/Users/uema/Desktop/Armario/Porta.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; Integrador.vhd                   ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/Integrador.vhd ;         ;
+; Reg4Bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/Reg4Bits.vhd   ;         ;
+; DecButtons.vhd                   ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/DecButtons.vhd ;         ;
+; AbreFecha.vhd                    ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/AbreFecha.vhd  ;         ;
+; FF_D.vhd                         ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/FF_D.vhd       ;         ;
+; Entrada.vhd                      ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/Entrada.vhd    ;         ;
+; Porta.vhd                        ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/Porta.vhd      ;         ;
+; DecDisplay.vhd                   ; yes             ; User VHDL File  ; C:/Users/uema/Documents/GitHub/cd_armario/Implementação/DecDisplay.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -172,45 +181,144 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 11    ;
+; Estimated Total logic elements              ; 84    ;
 ;                                             ;       ;
-; Total combinational functions               ; 6     ;
+; Total combinational functions               ; 60    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 4     ;
+;     -- 4 input functions                    ; 33    ;
+;     -- 3 input functions                    ; 2     ;
+;     -- <=2 input functions                  ; 25    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 6     ;
+;     -- normal mode                          ; 60    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 5     ;
-;     -- Dedicated logic registers            ; 5     ;
+; Total registers                             ; 36    ;
+;     -- Dedicated logic registers            ; 36    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 11    ;
+; I/O pins                                    ; 34    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; e_clr ;
-; Maximum fan-out                             ; 4     ;
-; Total fan-out                               ; 32    ;
-; Average fan-out                             ; 1.45  ;
+; Maximum fan-out node                        ; ok    ;
+; Maximum fan-out                             ; 13    ;
+; Total fan-out                               ; 313   ;
+; Average fan-out                             ; 2.41  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
-; |Porta                     ; 6 (6)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |Porta                               ;              ;
-;    |AbreFecha:abreFecha1|  ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Porta|AbreFecha:abreFecha1          ;              ;
-;    |Reg4Bits:regSenha1|    ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Porta|Reg4Bits:regSenha1            ;              ;
-;       |FF_D:FF_B0|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Porta|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
-;       |FF_D:FF_B1|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Porta|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
-;       |FF_D:FF_B2|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Porta|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
-;       |FF_D:FF_B3|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Porta|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
+; |Entrada                        ; 60 (2)            ; 36 (0)       ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |Entrada                                                                   ;              ;
+;    |DecButtons:decButtons1|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|DecButtons:decButtons1                                            ;              ;
+;    |DecDisplay:decDisplay1|     ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|DecDisplay:decDisplay1                                            ;              ;
+;    |Integrador:Integrador1|     ; 14 (8)            ; 7 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1                                            ;              ;
+;       |Porta:Porta1|            ; 6 (6)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1                               ;              ;
+;          |AbreFecha:abreFecha1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
+;          |Reg4Bits:regSenha1|   ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
+;             |FF_D:FF_B0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
+;             |FF_D:FF_B1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
+;             |FF_D:FF_B2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador1|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Integrador:Integrador2|     ; 13 (7)            ; 7 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2                                            ;              ;
+;       |Porta:Porta1|            ; 6 (6)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1                               ;              ;
+;          |AbreFecha:abreFecha1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
+;          |Reg4Bits:regSenha1|   ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
+;             |FF_D:FF_B0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
+;             |FF_D:FF_B1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
+;             |FF_D:FF_B2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador2|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Integrador:Integrador3|     ; 12 (6)            ; 7 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3                                            ;              ;
+;       |Porta:Porta1|            ; 6 (6)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1                               ;              ;
+;          |AbreFecha:abreFecha1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
+;          |Reg4Bits:regSenha1|   ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
+;             |FF_D:FF_B0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
+;             |FF_D:FF_B1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
+;             |FF_D:FF_B2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador3|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Integrador:Integrador4|     ; 12 (6)            ; 7 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4                                            ;              ;
+;       |Porta:Porta1|            ; 6 (6)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1                               ;              ;
+;          |AbreFecha:abreFecha1| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1          ;              ;
+;          |Reg4Bits:regSenha1|   ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1            ;              ;
+;             |FF_D:FF_B0|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B0 ;              ;
+;             |FF_D:FF_B1|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B1 ;              ;
+;             |FF_D:FF_B2|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B2 ;              ;
+;             |FF_D:FF_B3|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Integrador:Integrador4|Porta:Porta1|Reg4Bits:regSenha1|FF_D:FF_B3 ;              ;
+;    |Reg4Bits:regButtons1|       ; 1 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regButtons1                                              ;              ;
+;       |FF_D:FF_B0|              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B0                                   ;              ;
+;       |FF_D:FF_B1|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B1                                   ;              ;
+;       |FF_D:FF_B2|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B2                                   ;              ;
+;       |FF_D:FF_B3|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regButtons1|FF_D:FF_B3                                   ;              ;
+;    |Reg4Bits:regSenha1|         ; 0 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regSenha1                                                ;              ;
+;       |FF_D:FF_B0|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regSenha1|FF_D:FF_B0                                     ;              ;
+;       |FF_D:FF_B1|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regSenha1|FF_D:FF_B1                                     ;              ;
+;       |FF_D:FF_B2|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regSenha1|FF_D:FF_B2                                     ;              ;
+;       |FF_D:FF_B3|              ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Entrada|Reg4Bits:regSenha1|FF_D:FF_B3                                     ;              ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |Entrada|Integrador:Integrador4|estado             ;
++-----------------+----------------+-----------------+---------------+
+; Name            ; estado.fechado ; estado.aberto_s ; estado.aberto ;
++-----------------+----------------+-----------------+---------------+
+; estado.aberto   ; 0              ; 0               ; 0             ;
+; estado.aberto_s ; 0              ; 1               ; 1             ;
+; estado.fechado  ; 1              ; 0               ; 1             ;
++-----------------+----------------+-----------------+---------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |Entrada|Integrador:Integrador3|estado             ;
++-----------------+----------------+-----------------+---------------+
+; Name            ; estado.fechado ; estado.aberto_s ; estado.aberto ;
++-----------------+----------------+-----------------+---------------+
+; estado.aberto   ; 0              ; 0               ; 0             ;
+; estado.aberto_s ; 0              ; 1               ; 1             ;
+; estado.fechado  ; 1              ; 0               ; 1             ;
++-----------------+----------------+-----------------+---------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |Entrada|Integrador:Integrador2|estado             ;
++-----------------+----------------+-----------------+---------------+
+; Name            ; estado.fechado ; estado.aberto_s ; estado.aberto ;
++-----------------+----------------+-----------------+---------------+
+; estado.aberto   ; 0              ; 0               ; 0             ;
+; estado.aberto_s ; 0              ; 1               ; 1             ;
+; estado.fechado  ; 1              ; 0               ; 1             ;
++-----------------+----------------+-----------------+---------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |Entrada|Integrador:Integrador1|estado             ;
++-----------------+----------------+-----------------+---------------+
+; Name            ; estado.fechado ; estado.aberto_s ; estado.aberto ;
++-----------------+----------------+-----------------+---------------+
+; estado.aberto   ; 0              ; 0               ; 0             ;
+; estado.aberto_s ; 0              ; 1               ; 1             ;
+; estado.fechado  ; 1              ; 0               ; 1             ;
++-----------------+----------------+-----------------+---------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; Integrador:Integrador1|estado.fechado ; Lost fanout        ;
+; Integrador:Integrador2|estado.fechado ; Lost fanout        ;
+; Integrador:Integrador3|estado.fechado ; Lost fanout        ;
+; Integrador:Integrador4|estado.fechado ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -218,24 +326,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 36    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Clear ; 36    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; AbreFecha:abreFecha1|Sp                ; 1       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
++-----------------------------------------------------------------------+
+; Inverted Register Statistics                                          ;
++-------------------------------------------------------------+---------+
+; Inverted Register                                           ; Fan out ;
++-------------------------------------------------------------+---------+
+; Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 5       ;
+; Integrador:Integrador2|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 5       ;
+; Integrador:Integrador3|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 4       ;
+; Integrador:Integrador4|Porta:Porta1|AbreFecha:abreFecha1|Sp ; 4       ;
+; Total number of inverted registers = 4                      ;         ;
++-------------------------------------------------------------+---------+
 
 
 +-------------------------------+
@@ -253,9 +364,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Nov 23 01:18:59 2017
+    Info: Processing started: Fri Nov 24 22:31:25 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Armario -c Armario
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file integrador.vhd
+    Info (12022): Found design unit 1: Integrador-Integrador
+    Info (12023): Found entity 1: Integrador
 Info (12021): Found 2 design units, including 1 entities, in source file reg4bits.vhd
     Info (12022): Found design unit 1: Reg4Bits-Reg4Bits
     Info (12023): Found entity 1: Reg4Bits
@@ -277,22 +391,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file porta.v
 Info (12021): Found 2 design units, including 1 entities, in source file decdisplay.vhd
     Info (12022): Found design unit 1: DecDisplay-DecDisplay
     Info (12023): Found entity 1: DecDisplay
-Info (12127): Elaborating entity "Porta" for the top level hierarchy
-Info (12128): Elaborating entity "Reg4Bits" for hierarchy "Reg4Bits:regSenha1"
-Info (12128): Elaborating entity "FF_D" for hierarchy "Reg4Bits:regSenha1|FF_D:FF_B0"
-Info (12128): Elaborating entity "AbreFecha" for hierarchy "AbreFecha:abreFecha1"
+Info (12127): Elaborating entity "Entrada" for the top level hierarchy
+Info (12128): Elaborating entity "DecButtons" for hierarchy "DecButtons:decButtons1"
+Info (12128): Elaborating entity "DecDisplay" for hierarchy "DecDisplay:decDisplay1"
+Info (12128): Elaborating entity "Reg4Bits" for hierarchy "Reg4Bits:regButtons1"
+Info (12128): Elaborating entity "FF_D" for hierarchy "Reg4Bits:regButtons1|FF_D:FF_B0"
+Info (12128): Elaborating entity "Integrador" for hierarchy "Integrador:Integrador1"
+Info (12128): Elaborating entity "Porta" for hierarchy "Integrador:Integrador1|Porta:Porta1"
+Info (12128): Elaborating entity "AbreFecha" for hierarchy "Integrador:Integrador1|Porta:Porta1|AbreFecha:abreFecha1"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dec_display[1]" is stuck at GND
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 22 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 11 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+Info (21057): Implemented 120 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 23 output pins
+    Info (21061): Implemented 86 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 568 megabytes
-    Info: Processing ended: Thu Nov 23 01:19:01 2017
+    Info: Processing ended: Fri Nov 24 22:31:27 2017
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

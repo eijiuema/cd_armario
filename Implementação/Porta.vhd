@@ -1,10 +1,10 @@
-Library IEEE;
+LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY Porta IS
 	PORT(s							: IN  STD_LOGIC_VECTOR (3 DOWNTO 0);	-- SW0-3
          ss, clr, enM, enF, fechar	: IN  STD_LOGIC;						-- KEY0, KEY1, SW4, SW5, KEY2
-         Sp, Sc						: OUT STD_LOGIC);							-- LEDG0, LEDG1
+         Sp, Sc						: OUT STD_LOGIC);						-- LEDG0, LEDG1
 END Porta;
 
 ARCHITECTURE Porta OF Porta IS
