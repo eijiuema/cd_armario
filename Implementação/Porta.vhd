@@ -22,20 +22,20 @@ COMPONENT AbreFecha
 END COMPONENT;
 
 SIGNAL reg_s : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL e_ss, e_clr, e_fechar : STD_LOGIC;
+SIGNAL reg_ss, reg_clr, i_fechar : STD_LOGIC;
 
 BEGIN
 
-	e_ss <= NOT(ss AND enM);
-	e_clr <= NOT(clr AND enM);
-	e_fechar <= fechar AND enM;
+	reg_ss <= NOT(ss AND EnM);
+	reg_clr <= NOT(clr AND EnM);
+	i_fechar <= fechar AND EnM;
 	
 	Sc <= EnM AND (s(0) XNOR reg_s(0)) AND (s(1) XNOR reg_s(1)) AND (s(2) XNOR reg_s(2)) AND (s(3) XNOR reg_s(3));
 
 	regSenha1 : Reg4Bits
-	PORT MAP(d => s, clock => e_ss, clear => e_clr, q => reg_s);
+	PORT MAP(d => s, clock => reg_ss, clear => reg_clr, q => reg_s);
 
 	abreFecha1 : AbreFecha
-	PORT MAP(enF => enF, fechar => e_fechar, Sp => Sp);
+	PORT MAP(enF => enF, fechar => i_fechar, Sp => Sp);
 
 END;

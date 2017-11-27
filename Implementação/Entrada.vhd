@@ -4,7 +4,8 @@ USE IEEE.STD_LOGIC_1164.ALL;
 ENTITY Entrada IS
 	PORT(in_b 									: IN STD_LOGIC_VECTOR(1 DOWNTO 0); 	-- SW17-16
 		 in_sn 									: IN STD_LOGIC_VECTOR(3 DOWNTO 0); 	-- SW15-12
-		 clock, ok, cancel, reset, fechar		: IN STD_LOGIC;						-- (clock sem pin), KEY3-2, SW0
+		 clock, ok, cancel, reset			: IN STD_LOGIC;						-- (clock sem pin), KEY3-1
+		 fechar									: IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- SW3-0
 		 out_sc									: OUT STD_LOGIC;					-- LEDG8
 		 out_sp 								: OUT STD_LOGIC_VECTOR(3 DOWNTO 0); -- LEDG6,4,2,0
 		 out_b 									: OUT STD_LOGIC_VECTOR(3 DOWNTO 0); -- LEDG7,5,3,1
@@ -36,20 +37,26 @@ COMPONENT Integrador
 		 out_sp, out_sc						: OUT STD_LOGIC);
 END COMPONENT;
 
-SIGNAL dec_b, reg_b, reg_sn, s_sp, s_sc 	: STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL reg_clock, reg_clear, invalid_s 		: STD_LOGIC;
+SIGNAL dec_b, reg_b, c_b, reg_sn, s_sp, s_sc 							: STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL invalid_s, not_ok, not_clear, reg_clear 	: STD_LOGIC;
 
 BEGIN
 
-	reg_clock <= NOT ok;
-	reg_clear <= NOT(cancel OR reset);
+	not_ok <= NOT ok;
+	not_clear <= NOT cancel;
+	reg_clear <= cancel AND reset;
 
 	invalid_s <= (reg_sn(0) AND reg_sn(1) AND reg_sn(2) AND reg_sn(3)) OR NOT(reg_sn(0) OR reg_sn(1) OR reg_sn(2) OR reg_sn(3));
 
-	out_b(0) <= reg_b(0) AND NOT invalid_s;
-	out_b(1) <= reg_b(1) AND NOT invalid_s;
-	out_b(2) <= reg_b(2) AND NOT invalid_s;
-	out_b(3) <= reg_b(3) AND NOT invalid_s;
+	c_b(0) <= reg_b(0) AND NOT invalid_s;
+	c_b(1) <= reg_b(1) AND NOT invalid_s;
+	c_b(2) <= reg_b(2) AND NOT invalid_s;
+	c_b(3) <= reg_b(3) AND NOT invalid_s;
+
+	out_b(0) <= c_b(0);
+	out_b(1) <= c_b(1);
+	out_b(2) <= c_b(2);
+	out_b(3) <= c_b(3);
 
 	out_sn <= reg_sn;
 
@@ -67,21 +74,21 @@ BEGIN
 	PORT MAP(valor => in_b, dig0 => dec_display);
 
 	regButtons1 : Reg4Bits
-	PORT MAP(d => dec_b, clock => reg_clock, clear => reg_clear, q => reg_b);
+	PORT MAP(d => dec_b, clock => ok, clear => reg_clear, q => reg_b);
 
 	regSenha1 : Reg4Bits
-	PORT MAP(d => in_sn, clock => reg_clock, clear => reg_clear, q => reg_sn);
+	PORT MAP(d => in_sn, clock => ok, clear => reg_clear, q => reg_sn);
 
 	Integrador1 : Integrador
-	PORT MAP(clock => clock, reset => reset, fechar => fechar, set => ok, clr => cancel, bi => reg_b(0), s => reg_sn, out_sp => s_sp(0), out_sc => s_sc(0));
+	PORT MAP(clock => clock, reset => reset, fechar => fechar(0), set => not_ok, clr => not_clear, bi => c_b(0), s => reg_sn, out_sp => s_sp(0), out_sc => s_sc(0));
 
 	Integrador2 : Integrador
-	PORT MAP(clock => clock, reset => reset, fechar => fechar, set => ok, clr => cancel, bi => reg_b(1), s => reg_sn, out_sp => s_sp(1), out_sc => s_sc(1));
+	PORT MAP(clock => clock, reset => reset, fechar => fechar(1), set => not_ok, clr => not_clear, bi => c_b(1), s => reg_sn, out_sp => s_sp(1), out_sc => s_sc(1));
 
 	Integrador3 : Integrador
-	PORT MAP(clock => clock, reset => reset, fechar => fechar, set => ok, clr => cancel, bi => reg_b(2), s => reg_sn, out_sp => s_sp(2), out_sc => s_sc(2));
+	PORT MAP(clock => clock, reset => reset, fechar => fechar(2), set => not_ok, clr => not_clear, bi => c_b(2), s => reg_sn, out_sp => s_sp(2), out_sc => s_sc(2));
 
 	Integrador4 : Integrador
-	PORT MAP(clock => clock, reset => reset, fechar => fechar, set => ok, clr => cancel, bi => reg_b(3), s => reg_sn, out_sp => s_sp(3), out_sc => s_sc(3));
+	PORT MAP(clock => clock, reset => reset, fechar => fechar(3), set => not_ok, clr => not_clear, bi => c_b(3), s => reg_sn, out_sp => s_sp(3), out_sc => s_sc(3));
 
 END entrada;
